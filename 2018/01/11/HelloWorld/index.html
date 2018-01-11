@@ -27,7 +27,8 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -98,8 +99,8 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 ></h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/gallery/helloworld.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >搭建hexo在git上的个人博客</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
@@ -108,34 +109,25 @@
 <p>我们坚信写作写的是内容，所思所想，而不是花样格式。<br>— Ulysses for Mac</p>
 </blockquote>
 <p>虽然我用的是<strong><code>macdown</code></strong></p>
-<p>####咱的第一篇文章就写这个博客的搭建过程吧</p>
-<p>######(当然也是第一次用markdown写文章)</p>
-<p>##搭建hexo</p>
-<p>####(其实也可以去看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo的官方文档</a>)</p>
-<p>#####以下为MacOS下的hexo安装过程</p>
-<ol>
+<h4 id="咱的第一篇文章就写这个博客的搭建过程吧"><a href="#咱的第一篇文章就写这个博客的搭建过程吧" class="headerlink" title="咱的第一篇文章就写这个博客的搭建过程吧"></a>咱的第一篇文章就写这个博客的搭建过程吧</h4><h6 id="当然也是第一次用markdown写文章"><a href="#当然也是第一次用markdown写文章" class="headerlink" title="(当然也是第一次用markdown写文章)"></a>(当然也是第一次用markdown写文章)</h6><h2 id="搭建hexo"><a href="#搭建hexo" class="headerlink" title="搭建hexo"></a>搭建hexo</h2><h4 id="其实也可以去看hexo的官方文档"><a href="#其实也可以去看hexo的官方文档" class="headerlink" title="(其实也可以去看hexo的官方文档)"></a>(其实也可以去看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener"><font color="skyblue">hexo的官方文档</font></a>)</h4><h5 id="以下为MacOS下的hexo安装过程"><a href="#以下为MacOS下的hexo安装过程" class="headerlink" title="以下为MacOS下的hexo安装过程"></a>以下为MacOS下的hexo安装过程</h5><ol>
 <li>首先hexo是基于nodejs的，所以必须安装nodejs</li>
 <li>安装nodejs方法很多，我选择homebrew安装方式，所以需要安装它</li>
 <li>安装homebrew就很简单了，mac自带ruby脚本功能，一句话搞定</li>
 <li>hexo提交部署github需要使用git工具，所以需要安装git，用homebrew的话也是一句话搞定</li>
 <li>OK整理一下安装顺序：homebrew-nodejs-hexo-git</li>
-<li>上面这段是我抄的……原文<a href="https://www.cnblogs.com/mjiayou/p/3791373.html" target="_blank" rel="noopener">这里</a></li>
+<li>上面这段是我抄的……原文<a href="https://www.cnblogs.com/mjiayou/p/3791373.html" target="_blank" rel="noopener"><font color="skyblue">这里</font></a></li>
 </ol>
-<p>###安装brewhome<br><code>ruby -e &quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)”</code></p>
-<p>###安装nodejs<br><code>brew install node</code></p>
-<p>###安装hexo<br><code>npm install -g hexo</code><br><code>hexo init</code><br><code>npm install</code></p>
-<p>###安装git<br><code>sudo brew install git</code></p>
-<p>######于是安装环境就已经准备好啦，接下来我们搭建博客的本地目录</p>
-<p>###初始化hexo<br>创建一个文件夹作为博客的本体QAQ<br>进入其目录执行hexo  </p>
+<h3 id="安装brewhome"><a href="#安装brewhome" class="headerlink" title="安装brewhome"></a>安装brewhome</h3><p><code>ruby -e &quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)”</code></p>
+<h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><p><code>brew install node</code></p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p><code>npm install -g hexo</code>  </p>
+<h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p><code>sudo brew install git</code></p>
+<h6 id="于是安装环境就已经准备好啦，接下来我们搭建博客的本地目录"><a href="#于是安装环境就已经准备好啦，接下来我们搭建博客的本地目录" class="headerlink" title="于是安装环境就已经准备好啦，接下来我们搭建博客的本地目录"></a>于是安装环境就已经准备好啦，接下来我们搭建博客的本地目录</h6><h3 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h3><p>创建一个文件夹作为博客的本体QAQ<br>进入其目录执行hexo  </p>
 <p><code>hexo init</code>   </p>
 <p> 生成静态页面  </p>
 <p><code>hexo generate</code>  </p>
 <p>并本地渲染启动  </p>
 <p><code>hexo server</code>  </p>
-<p>####这样hexo就已经运行了，浏览器进入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
-<p>######他们说直接编译渲染的话会出问题（嗯我这里啥问题都没出）</p>
-<p>###常见的HEXO配置错误（由于我没有问题所以这段借鉴的<a href="http://baixin.io/2015/08/HEXO搭建个人博客/" target="_blank" rel="noopener">这里</a>）</p>
-<blockquote>
+<h4 id="这样hexo就已经运行了，浏览器进入http-localhost-4000"><a href="#这样hexo就已经运行了，浏览器进入http-localhost-4000" class="headerlink" title="这样hexo就已经运行了，浏览器进入http://localhost:4000"></a>这样hexo就已经运行了，浏览器进入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></h4><h6 id="他们说直接编译渲染的话会出问题（嗯我这里啥问题都没出）"><a href="#他们说直接编译渲染的话会出问题（嗯我这里啥问题都没出）" class="headerlink" title="他们说直接编译渲染的话会出问题（嗯我这里啥问题都没出）"></a>他们说直接编译渲染的话会出问题（嗯我这里啥问题都没出）</h6><h3 id="常见的HEXO配置错误（由于我没有问题所以这段借鉴的这里）"><a href="#常见的HEXO配置错误（由于我没有问题所以这段借鉴的这里）" class="headerlink" title="常见的HEXO配置错误（由于我没有问题所以这段借鉴的这里）"></a>常见的HEXO配置错误（由于我没有问题所以这段借鉴的<a href="http://baixin.io/2015/08/HEXO搭建个人博客/" target="_blank" rel="noopener"><font color="skyblue">这里</font></a>）</h3><blockquote>
 <p><font color="red">ERROR Plugin <font color="black">load <font color="green">failed: <font color="black">hexo-server  </font></font></font></font></p>
 <p><font color="black">原因： <font color="red">Besides<font color="black">, utilities are separated into a standalone <font color="purple">module. <font color="yellowgreen">hexo.util is not reachable anymore.  </font></font></font></font></font></p>
 <p><font color="black">解决方法，执行命令：$ sudo npm install hexo-server    </font></p>
@@ -147,14 +139,24 @@
 <p><code>npm install hexo-renderer-ejs --save</code><br><code>npm install hexo-renderer-stylus --save</code><br><code>npm install hexo-renderer-marked --save</code>  </p>
 <p>再生成静态页面并启动本地服务器  </p>
 <p><code>hexo generate</code><br><code>hexo server</code></p>
-<p>##配置Github</p>
-<p>###建立Repository与本地关联<br>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】<br>然后用编辑器打开<strong>本地</strong>博客本体的<strong>根目录</strong>下的<strong><code>_config.yml</code></strong><br>这个配置文件就是这个博客全局的设置，我们先来挂上git<br>在<strong>最下方</strong>找到<strong><code>deploy</code></strong>项并改成下面这样子：  </p>
+<h2 id="配置Github"><a href="#配置Github" class="headerlink" title="配置Github"></a>配置Github</h2><h3 id="建立Repository与本地的关联"><a href="#建立Repository与本地的关联" class="headerlink" title="建立Repository与本地的关联"></a>建立Repository与本地的关联</h3><p>建立与你用户名对应的仓库，仓库名必须为【your-user-name.github.io】<br>然后用编辑器打开<strong>本地</strong>博客本体的<strong>根目录</strong>下的<strong><code>_config.yml</code></strong><br>这个配置文件就是这个博客全局的设置，我们先来挂上git<br>在<strong>最下方</strong>找到<strong><code>deploy</code></strong>项并改成下面这样子：  </p>
 <blockquote>
-<p><font color="black">deploy:<br>type: git<br>repository: <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><font color="green">【user-name】<font color="black">/<font color="green">【user-name】<font color="black">.github.io.git<br>branch: master</font></font></font></font></font></p>
-</blockquote>
-<p>执行如下命令部署git</p>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre>
+<font color="black">deploy:<br>type: git<br>repository: <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><font color="green">【user-name】</font><font color="black">/</font><font color="green">【user-name】</font><font color="black">.github.io.git<br>branch: master</font>
+
+</font></blockquote>
+<p>执行如下命令部署git<br><code>npm install hexo-deployer-git --save</code></p>
+<p>上传配置<br><code>hexo deploy</code></p>
+<p>至此，只需每次把文章放入source文件夹中对应的文件夹再<br><code>hexo clean</code><br><code>hexo generate</code><br><code>hexo deploy</code><br>就可以了</p>
+<p>hexo的常用命令有  </p>
+<pre class="line-numbers language-bash"><code class="language-bash">hexo new <span class="token string">"postName"</span> <span class="token comment" spellcheck="true">#新建文章</span>
+hexo new page <span class="token string">"pageName"</span> <span class="token comment" spellcheck="true">#新建页面</span>
+hexo generate <span class="token comment" spellcheck="true">#生成静态页面至public目录</span>
+hexo server <span class="token comment" spellcheck="true">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span>
+hexo deploy <span class="token comment" spellcheck="true">#将.deploy目录部署到GitHub</span>
+hexo <span class="token function">help</span>  <span class="token comment" spellcheck="true">#查看帮助</span>
+hexo version  <span class="token comment" spellcheck="true">#查看Hexo的版本</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="以上。"><a href="#以上。" class="headerlink" title="以上。"></a>以上。</h3>
             </div>
 
             <!-- Post Comments -->
