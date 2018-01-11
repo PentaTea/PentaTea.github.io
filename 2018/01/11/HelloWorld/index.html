@@ -99,11 +99,62 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >helloworld.md</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 ></h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                
+                <blockquote>
+<p><em>We believe that writing is about content, about what you want to say – not about fancy formatting. </em></p>
+<p>我们坚信写作写的是内容，所思所想，而不是花样格式。<br>— Ulysses for Mac</p>
+</blockquote>
+<p>虽然我用的是<strong><code>macdown</code></strong></p>
+<p>####咱的第一篇文章就写这个博客的搭建过程吧</p>
+<p>######(当然也是第一次用markdown写文章)</p>
+<p>##搭建hexo</p>
+<p>####(其实也可以去看<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo的官方文档</a>)</p>
+<p>#####以下为MacOS下的hexo安装过程</p>
+<ol>
+<li>首先hexo是基于nodejs的，所以必须安装nodejs</li>
+<li>安装nodejs方法很多，我选择homebrew安装方式，所以需要安装它</li>
+<li>安装homebrew就很简单了，mac自带ruby脚本功能，一句话搞定</li>
+<li>hexo提交部署github需要使用git工具，所以需要安装git，用homebrew的话也是一句话搞定</li>
+<li>OK整理一下安装顺序：homebrew-nodejs-hexo-git</li>
+<li>上面这段是我抄的……原文<a href="https://www.cnblogs.com/mjiayou/p/3791373.html" target="_blank" rel="noopener">这里</a></li>
+</ol>
+<p>###安装brewhome<br><code>ruby -e &quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)”</code></p>
+<p>###安装nodejs<br><code>brew install node</code></p>
+<p>###安装hexo<br><code>npm install -g hexo</code><br><code>hexo init</code><br><code>npm install</code></p>
+<p>###安装git<br><code>sudo brew install git</code></p>
+<p>######于是安装环境就已经准备好啦，接下来我们搭建博客的本地目录</p>
+<p>###初始化hexo<br>创建一个文件夹作为博客的本体QAQ<br>进入其目录执行hexo  </p>
+<p><code>hexo init</code>   </p>
+<p> 生成静态页面  </p>
+<p><code>hexo generate</code>  </p>
+<p>并本地渲染启动  </p>
+<p><code>hexo server</code>  </p>
+<p>####这样hexo就已经运行了，浏览器进入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a></p>
+<p>######他们说直接编译渲染的话会出问题（嗯我这里啥问题都没出）</p>
+<p>###常见的HEXO配置错误（由于我没有问题所以这段借鉴的<a href="http://baixin.io/2015/08/HEXO搭建个人博客/" target="_blank" rel="noopener">这里</a>）</p>
+<blockquote>
+<p><font color="red">ERROR Plugin <font color="black">load <font color="green">failed: <font color="black">hexo-server  </font></font></font></font></p>
+<p><font color="black">原因： <font color="red">Besides<font color="black">, utilities are separated into a standalone <font color="purple">module. <font color="yellowgreen">hexo.util is not reachable anymore.  </font></font></font></font></font></p>
+<p><font color="black">解决方法，执行命令：$ sudo npm install hexo-server    </font></p>
+<p>执行命令hexo server，提示：Usage: hexo&lt; Command&gt; ….<br>原因：我认为是没有生成本地服务<br>解决方法，执行命令： npm install hexo-server –save<br>提示：hexo-server@0.1.2 node_modules/hexo-server….<br><code>表示成功了参考https://hexo.io/zh-cn/docs/server.html</code><br>这个时候再执行：$ hexo-server</p>
+</blockquote>
+<p>得到: INFO Hexo is running at <a href="http://0.0.0.0:4000/" target="_blank" rel="noopener">http://0.0.0.0:4000/</a>. Press Ctrl+C to stop.  </p>
+<p>这个时候再点击<a href="http://0.0.0.0:4000，正常情况下应该是最原始的画面，但是我看到的是：" target="_blank" rel="noopener">http://0.0.0.0:4000，正常情况下应该是最原始的画面，但是我看到的是：</a> 白板和Cannot GET / 几个字  </p>
+<p>原因： 由于2.6以后就更新了，我们需要手动配置些东西，我们需要输入下面三行命令：</p>
+<p><code>npm install hexo-renderer-ejs --save</code><br><code>npm install hexo-renderer-stylus --save</code><br><code>npm install hexo-renderer-marked --save</code>  </p>
+<p>再生成静态页面并启动本地服务器  </p>
+<p><code>hexo generate</code><br><code>hexo server</code></p>
+<p>##配置Github</p>
+<p>###建立Repository与本地关联<br>建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】<br>然后用编辑器打开<strong>本地</strong>博客本体的<strong>根目录</strong>下的<strong><code>_config.yml</code></strong><br>这个配置文件就是这个博客全局的设置，我们先来挂上git<br>在<strong>最下方</strong>找到<strong><code>deploy</code></strong>项并改成下面这样子：  </p>
+<blockquote>
+<p><font color="black">deploy:<br>type: git<br>repository: <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><font color="green">【user-name】<font color="black">/<font color="green">【user-name】<font color="black">.github.io.git<br>branch: master</font></font></font></font></font></p>
+</blockquote>
+<p>执行如下命令部署git</p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre>
             </div>
 
             <!-- Post Comments -->
@@ -165,8 +216,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2018/01/10/helloworld-md/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2018/01/10/helloworld-md/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2018/01/11/HelloWorld/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/01/11/HelloWorld/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
