@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    B-Tree
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">罪歌moecopilot</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/教程/">教程</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">归档</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2018/01/">January 2018</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/moecopilot" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/gallery/markdown.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >markdown语法和心得</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h4 id="在这篇文章里我会总结一下markdown的语法和心得"><a href="#在这篇文章里我会总结一下markdown的语法和心得" class="headerlink" title="在这篇文章里我会总结一下markdown的语法和心得"></a>在这篇文章里我会总结一下markdown的语法和心得</h4><h1 id="因为markdown真的是太好用了！！！！"><a href="#因为markdown真的是太好用了！！！！" class="headerlink" title="因为markdown真的是太好用了！！！！"></a>因为markdown真的是太好用了！！！！</h1><h5 id="需要注意的有以下几点"><a href="#需要注意的有以下几点" class="headerlink" title="需要注意的有以下几点"></a>需要注意的有以下几点</h5><h5 id="（建议先了解md语言之后再阅读，但我不想把此条放在后面……有必要放在最前面自省！）欲阅markdown语法库请往下翻跳过此标签。"><a href="#（建议先了解md语言之后再阅读，但我不想把此条放在后面……有必要放在最前面自省！）欲阅markdown语法库请往下翻跳过此标签。" class="headerlink" title="（建议先了解md语言之后再阅读，但我不想把此条放在后面……有必要放在最前面自省！）欲阅markdown语法库请往下翻跳过此标签。"></a>（建议先了解md语言之后再阅读，但我不想把此条放在后面……有必要放在最前面自省！）欲阅markdown语法库请往下翻跳过此标签。</h5><blockquote>
+<ol>
+<li><font color="green">嵌套性语句如 <code>**[加粗]**</code>  <code>&lt;font color = 颜色 &gt;[p]&lt;/font&gt;</code> 的休止一定要加上。有时的 <code>&lt;/font&gt;</code> 忘记就会造成之后整片文章的颜色错误。</font>  
+</li>
+<li><font color="green">markdown的大多数标记后需要加空格，如 <code>#标题</code> 这样的语句在编辑器里可以解析，但是在博客里就会显示为纯文字“#标题”而不是大标题。</font>  
+</li>
+<li><font color="green">markdown允许内嵌HTML语法，一些原生markdown没有的功能也就可以写出来啦。比如可用 <code>&lt;font color = 颜色 &gt;[p]&lt;/font&gt;</code> 来改变词语或整个段落的颜色。</font>  
+</li>
+<li><font color="green">换行可以用 <code>&lt;br/&gt;</code> ，不过我推荐使用md标准语法：“两个空格加回车”。</font>
+</li>
+<li><font color="green">但是特殊字符的书写问题使得我们有时还是不习惯用HTML的行文来写，比如 <code>&lt;</code> 和 <code>&amp;</code> ，&lt; 符号用于起始标签，&amp; 符号则用于标记 HTML 实体，如果你在HTML标签里只是想要显示这些字符的原型，你必须要使用实体的形式，像是 <code>&amp;lt;</code> 和 <code>&amp;amp;</code> ,而如果用markdown的语法来行文，就不需要把所有要显示的<code>&lt;</code>写为 <code>&amp;lt;</code> 了，编辑器会自动底层转换为实体字符。<br>所以你如果要在文档中插入一个版权符号 ©，你可以这样写： <code>&amp;copy;</code> 也可以写 <code>©</code> 。<br>若你写： <code>AT&amp;T</code> ，编译器会将它自动转为： <code>AT&amp;amp;T</code> 。<br>类似的状况也会发生在 <code>&lt;</code> 符号上，因为 Markdown 允许兼容HTML，如果你是把 <code>&lt;</code> 符号作为 HTML 标签的定界符使用，那 Markdown 也不会对它做任何转换，但是如果你写： <code>4 &lt; 5</code> ，编译器会将它自动转为： <code>4 &amp;lt; 5</code> 。</font>
+
+</li>
+</ol>
+</blockquote>
+<h1 id="Markdown-语法库"><a href="#Markdown-语法库" class="headerlink" title="Markdown 语法库"></a>Markdown 语法库</h1><h2 id="标题-Title"><a href="#标题-Title" class="headerlink" title="标题 Title"></a>标题 Title</h2><p>Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。<br>类 Setext 形式是用底线的形式，利用 <code>=</code> （最高阶标题）和 <code>-</code> （第二阶标题），例如：  </p>
+<pre><code>This is an H1
+=============
+
+This is an H2
+-------------
+</code></pre><p>显示为</p>
+<blockquote>
+<h1 id="This-is-an-H1"><a href="#This-is-an-H1" class="headerlink" title="This is an H1"></a>This is an H1</h1><h2 id="This-is-an-H2"><a href="#This-is-an-H2" class="headerlink" title="This is an H2"></a>This is an H2</h2></blockquote>
+<p>任何数量的 = 和 - 都可以有效果。  </p>
+<p>类 Atx 形式则是在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，例如：  </p>
+<pre><code># 这是 H1  
+
+## 这是 H2 
+
+###### 这是 H6
+</code></pre><p>显示为</p>
+<blockquote>
+<h1 id="这是-标题1"><a href="#这是-标题1" class="headerlink" title="这是 标题1"></a>这是 标题1</h1><h2 id="这是-标题2"><a href="#这是-标题2" class="headerlink" title="这是 标题2"></a>这是 标题2</h2><h6 id="这是-标题6"><a href="#这是-标题6" class="headerlink" title="这是 标题6"></a>这是 标题6</h6></blockquote>
+<h2 id="区块引用-Blockquotes"><a href="#区块引用-Blockquotes" class="headerlink" title="区块引用 Blockquotes"></a>区块引用 Blockquotes</h2><p>markdown中用<code>&gt;</code>来行文：  </p>
+<pre><code>&gt; ## 这是一个标题。
+&gt; 
+&gt; 1.   列表项
+&gt; 2.   列表项
+&gt; 
+&gt; 给出一些例子代码：
+&gt; 
+&gt;     return shell_exec(&quot;echo $input | $markdown_script&quot;);
+&gt; 
+&gt; 还可以把区块嵌套成像这样：
+&gt; &gt;第二层嵌套
+&gt; &gt; &gt;第三层嵌套
+&gt; &gt; &gt; &gt;第四层嵌套
+</code></pre><p>就能显示为</p>
+<blockquote>
+<h2 id="这是一个标题。"><a href="#这是一个标题。" class="headerlink" title="这是一个标题。"></a>这是一个标题。</h2><ol>
+<li>列表项</li>
+<li>列表项</li>
+</ol>
+<p>给出一些例子代码：</p>
+<pre><code>return shell_exec(&quot;echo $input | $markdown_script&quot;);
+</code></pre><p>还可以把区块嵌套成像这样：</p>
+<blockquote>
+<p>第二层嵌套</p>
+<blockquote>
+<p>第三层嵌套</p>
+<blockquote>
+<p>第四层嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="列表-list"><a href="#列表-list" class="headerlink" title="列表 list"></a>列表 list</h2><p>Markdown 支持有序列表和无序列表。  </p>
+<p>无序列表使用星号、加号或是减号作为列表标记：</p>
+<pre><code>*   ass
+*   we
+*   can
+
++   deep
++   dark
++   fantasy
+
+-   嘿
+-   嘿
+-   嘿
+</code></pre><p>会显示为  </p>
+<p><img src="/gallery/list.png" alt="">  </p>
+<p>当然，为了防止项目列表碰见句点和空格就形成，像下面这种写法：  </p>
+<p><code>1986. What a great season.</code>  </p>
+<p>被显示成  </p>
+<ol>
+<li>What a great season.</li>
+</ol>
+<p>你可以在句点前面加上反斜杠。</p>
+<p><code>1986\. What a great season.</code></p>
+<p>1986. What a great season.</p>
+<p><img src="/gallery/list2.png" alt="">  </p>
+<h2 id="代码-Code"><a href="#代码-Code" class="headerlink" title="代码 Code"></a>代码 Code</h2><p>和程序相关的写作或是标签语言原始码通常会有已经排版好的代码区块，通常这些区块我们并不希望它以一般段落文件的方式去排版，而是照原来的样子显示，Markdown 可以用 <code>&lt;pre&gt;</code> 和 <code>&lt;code&gt;</code> 标签来把代码区块包起来，或者使用更简单的代码区段元素: 反单引号 <code>`</code> ，用反单引号包起来的文字会保留其原有的实体。  </p>
+<h1 id="未完待续明天再写"><a href="#未完待续明天再写" class="headerlink" title="未完待续明天再写"></a>未完待续明天再写</h1>
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/01/11/markdown/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/01/11/markdown/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
