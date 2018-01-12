@@ -162,228 +162,201 @@
 <p>转自<a href="https://segmentfault.com/u/tiantian_" target="_blank" rel="noopener">tiantian</a>  </p>
 </blockquote>
 <p>我设了一个测试网站，嵌入（iframe）在这里了qwq  </p>
-<p><iframe src="http://b-tree.top/testCopy.html" style="width:100%;height:100px;"></iframe>  </p>
-<textarea style="width:100%;height:200px;" placeholder="粘贴在这里试一试喵叽"></textarea>
+<iframe src="http://b-tree.top/testCopy.html" style="width:100%;height:100px;"></iframe><br><textarea style="width:100%;height:200px;" placeholder="粘贴在这里试一试喵叽"></textarea><br><br>超好玩哈哈哈哈或或或或<br><br>&gt;而在这里<a href="https://www.zhihu.com/question/38140568" target="_blank" rel="noopener">https://www.zhihu.com/question/38140568</a><br><br>&gt; <a href="http://static.zhihu.com/static/revved/-/js/closure/common.d3bfcd50.js" target="_blank" rel="noopener">http://static.zhihu.com/static/revved/-/js/closure/common.d3bfcd50.js</a><br>&gt;<br>&gt; <code>js
+&gt; 
+&gt; var Qy = function(a, b, c) {
+&gt;   function d(a, b) {
+&gt;     return [&quot;著作权归作者所有。&quot;,
+&gt;       &quot;商业转载请联系作者获得授权，非商业转载请注明出处。&quot;,
+&gt;       &quot;作者：&quot; + b, &quot;链接：&quot; + a, &quot;来源：知乎&quot;,
+&gt;       &quot;&quot;, &quot;&quot;
+&gt;     ]
+&gt;   }
+&gt; 
+&gt;   function f(a, b, c) {
+&gt;     return &quot; div\x3e&quot; + d(b, c).join(
+&gt;         &quot; br /\x3e&quot;) + a +
+&gt;       &quot; /div\x3e&quot;
+&gt;   }
+&gt; 
+&gt;   function g(a) {
+&gt;     var g = z.Kq(),
+&gt;       m = g &amp;&amp; (0,
+&gt;         z.x)(g.Fd());
+&gt;     if (m &amp;&amp; !(42 &gt; m.length)) {
+&gt;       if (&quot;object&quot; === typeof a.originalEvent
+&gt;         .clipboardData &amp;&amp; (a.originalEvent
+&gt;           .clipboardData.setData(
+&gt;             &quot;text/html&quot;, f(g.Mf(), b,
+&gt;               c)),
+&gt;           a.originalEvent.clipboardData
+&gt;           .setData(&quot;text/plain&quot;, d(b,
+&gt;             c).join(&quot;\n&quot;) + m),
+&gt;           0 &lt; a.originalEvent.clipboardData
+&gt;           .getData(&quot;text/plain&quot;).length
+&gt;         )) {
+&gt;         a.preventDefault();
+&gt;         return
+&gt;       }
+&gt;       if (window.getSelection) {
+&gt;         a = g.Mf();
+&gt;         var n = (0,
+&gt;           window.$)(f(a, b, c)).css({
+&gt;           position: &quot;fixed&quot;,
+&gt;           left: &quot;-9999px&quot;
+&gt;         }).appendTo(&quot;body&quot;);
+&gt;         window.getSelection().selectAllChildren(
+&gt;           n.get(0));
+&gt;         (0,
+&gt;           window.setTimeout)(function() {
+&gt;           g.select();
+&gt;           n.remove()
+&gt;         }, 200)
+&gt;       }
+&gt;     }
+&gt;   }
+&gt;   a &amp;&amp; b &amp;&amp; c &amp;&amp; (z.Da(b, &quot;http&quot;) ||
+&gt;     (b = window.location.protocol +
+&gt;       &quot;//&quot; + window.location.host +
+&gt;       b),
+&gt;     a.on(&quot;copy&quot;, g))
+&gt; };
+&gt; 
+&gt;</code><br><br>&gt;转自<a href="https://www.zhihu.com/people/Rufus/activities" target="_blank" rel="noopener">鲁小夫</a><br><br><br><br>如果答案设置了不能复制，则阻止copy事件，并显示提示信息，如果复制的文本长度小于42的话，不会加上版权信息。<br>&gt; 关于copy事件:<br>&gt; <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/oncopy" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/oncopy</a><br>&gt; <a href="http://codebits.glennjones.net/editing/setclipboarddata.htm" target="_blank" rel="noopener">http://codebits.glennjones.net/editing/setclipboarddata.htm</a><br>&gt;<br>&gt; &gt; ## 概述<br>&gt; &gt; oncopy属性用来获取或设置当前元素的copy事件的事件处理函数.<br>&gt; &gt; ## 语法<br>&gt; &gt; <code>&gt; &gt; element.oncopy = functionRef;  
+&gt; &gt;   
+&gt; &gt;</code><br>&gt; &gt; functionRef 是一个函数名或者函数表达式.<br>&gt; &gt; ## 例子<br>&gt; &gt; <code>&gt; &gt; &lt;html&gt;
+&gt; &gt; &lt;head&gt;
+&gt; &gt; &lt;title&gt;oncopy示例演示&lt;/title&gt;
+&gt; &gt; 
+&gt; &gt; &lt;script&gt;
+&gt; &gt;   function log(txt)
+&gt; &gt;   {
+&gt; &gt;     document.getElementById(&quot;log&quot;).appendChild(document.createTextNode(txt + &quot;\n&quot;));
+&gt; &gt;   }
+&gt; &gt; &lt;/script&gt;
+&gt; &gt; &lt;/head&gt;
+&gt; &gt; 
+&gt; &gt; &lt;body&gt;
+&gt; &gt; &lt;div oncopy=&quot;log(&#39;复制被阻止!&#39;); return false;&quot;&gt;试着复制这句话!&lt;/div&gt;
+&gt; &gt; 
+&gt; &gt; &lt;h3&gt;Log&lt;/h3&gt;
+&gt; &gt; &lt;textarea rows=&quot;15&quot; cols=&quot;80&quot; id=&quot;log&quot; readonly=&quot;true&quot;&gt;&lt;/textarea&gt;
+&gt; &gt; &lt;/body&gt;
+&gt; &gt; &lt;/html&gt;
+&gt; &gt;</code><br>&gt; &gt; ## 备注<br>&gt; &gt; 上例演示了如何禁止复制浏览器中的一段话.<br>&gt; &gt; ## 规范<br>&gt; &gt; 当用户尝试复制选中元素或文本时会触发copy事件.<br>&gt; &gt;<br>&gt; &gt;<br>&gt;<br>&gt; glennjones给出了更加复杂的js，包括OnCopy日志的提取<br>&gt;<br>&gt; &gt; - Some of the current browsers support a clipboardData property as part of a copy event. This should allow you to set the clipboard data or append custom data as a user copies an object. The support is patchy and mostly incomplete. The IE interface is older than the rest, but has had support for a while where as Chrome and Safari support has only recently been added. With IE you can only set two fixed data types Text or URL.<br>&gt; &gt;<br>&gt; &gt; - When parts of this paragraph of text are copied an event should fire that alters the copied test. When pasted into the box below you should see a custom message. It will currently only work with IE Chrome and Safari. Try it out by copying and pasting this paragraph into the input box below.<br>&gt; &gt; ## The code<br>&gt; &gt;<br>&gt; &gt; <code>js
+&gt; &gt; window.addEventListener(&#39;load&#39;, function (e) {
+&gt; &gt; 
+&gt; &gt;     var node = document.getElementById(&#39;edit-box&#39;);
+&gt; &gt;     var copyNode = document.getElementById(&#39;custom-copy&#39;);
+&gt; &gt; 
+&gt; &gt;     copyNode.oncopy =function (e) {
+&gt; &gt;         log(&#39;copy&#39;);
+&gt; &gt;         if (e.clipboardData) {
+&gt; &gt;             e.preventDefault();
+&gt; &gt;             e.clipboardData.setData(
+&gt; &gt;                 &#39;text/xcustom&#39;, &#39;Added this custom data at copy&#39;);
+&gt; &gt; 
+&gt; &gt;             var setStatus = e.clipboardData.setData(
+&gt; &gt;                 &#39;text/plain&#39;, &#39;This is not the text you copied, it &#39; +
+&gt; &gt;                 &#39;was changed by the copy event handler&#39;);
+&gt; &gt;             log(&#39;setData: &#39; + setStatus);
+&gt; &gt;         }
+&gt; &gt;         if (window.clipboardData) {
+&gt; &gt;             e.returnValue = false;
+&gt; &gt;             var setStatus = window.clipboardData.setData(
+&gt; &gt;                 &#39;Text&#39;, &#39;This is not the text you copied, it &#39; +
+&gt; &gt;                 &#39;was changed by the copy event handler&#39;);
+&gt; &gt;             log(&#39;setData: &#39; + setStatus);
+&gt; &gt;         }
+&gt; &gt;     };
+&gt; &gt; 
+&gt; &gt;     node.onpaste = function (e) {
+&gt; &gt;         log(&#39;paste&#39;);
+&gt; &gt;         if (e.clipboardData) {
+&gt; &gt;             log(&#39;event.clipboardData&#39;);
+&gt; &gt;             if (e.clipboardData.types) {
+&gt; &gt;                 log(&#39;event.clipboardData.types&#39;);
+&gt; &gt; 
+&gt; &gt;                 // Look for a types property that is undefined
+&gt; &gt;                 if (!isArray(e.clipboardData.types)) {
+&gt; &gt;                     log(&#39;event.clipboardData.types is undefined&#39;);
+&gt; &gt;                 }
+&gt; &gt; 
+&gt; &gt;                 // Loop the data store by type and display it
+&gt; &gt;                 var i = 0;
+&gt; &gt;                 while (i &lt; e.clipboardData.types.length) {
+&gt; &gt;                     var key = e.clipboardData.types[i];
+&gt; &gt;                     var val = e.clipboardData.getData(key);
+&gt; &gt;                     log((i + 1) + &#39;: &#39; + key + &#39; - &#39; + val);
+&gt; &gt;                     i++;
+&gt; &gt;                 }
+&gt; &gt; 
+&gt; &gt;             } else {
+&gt; &gt;                 // Look for access to data if types array is missing
+&gt; &gt;                 var text = e.clipboardData.getData(&#39;text/plain&#39;);
+&gt; &gt;                 var url = e.clipboardData.getData(&#39;text/uri-list&#39;);
+&gt; &gt;                 var html = e.clipboardData.getData(&#39;text/html&#39;);
+&gt; &gt;                 var custom = e.clipboardData.getData(&#39;text/xcustom&#39;);
+&gt; &gt;                 log(&#39;text/plain - &#39; + text);
+&gt; &gt;                 if (url !== undefined) {
+&gt; &gt;                     log(&#39;text/uri-list - &#39; + url);
+&gt; &gt;                 }
+&gt; &gt;                 if (html !== undefined) {
+&gt; &gt;                     log(&#39;text/html - &#39; + html);
+&gt; &gt;                 }
+&gt; &gt;                 if (custom !== undefined) {
+&gt; &gt;                     log(&#39;text/xcustom - &#39; + custom);
+&gt; &gt;                 }
+&gt; &gt;             }
+&gt; &gt;         }
+&gt; &gt; 
+&gt; &gt;         // IE event is attached to the window object
+&gt; &gt;         if (window.clipboardData) {
+&gt; &gt;             log(&#39;window.clipboardData&#39;);
+&gt; &gt;             // The schema is fixed
+&gt; &gt;             var text = window.clipboardData.getData(&#39;Text&#39;);
+&gt; &gt;             var url = window.clipboardData.getData(&#39;URL&#39;);
+&gt; &gt;             log(&#39;Text - &#39; + text);
+&gt; &gt;             if (url !== null) {
+&gt; &gt;                 log(&#39;URL - &#39; + url);
+&gt; &gt;             }
+&gt; &gt;         }
+&gt; &gt;         // Needs a few msec to excute paste
+&gt; &gt;         window.setTimeout(logContents, 50, true);
+&gt; &gt;     };
+&gt; &gt; 
+&gt; &gt;     // Button events
+&gt; &gt;     var btn = document.getElementById(&#39;clear-logs&#39;);
+&gt; &gt;     btn.onclick = function (e) {
+&gt; &gt;         clearLog();
+&gt; &gt;     };
+&gt; &gt; });
+&gt; &gt; 
+&gt; &gt; function logContents() {
+&gt; &gt;     var node = document.getElementById(&#39;edit-box&#39;);
+&gt; &gt;     log(&#39;Current contents - &#39; + node.innerHTML);
+&gt; &gt; }
+&gt; &gt; 
+&gt; &gt; function log(str) {
+&gt; &gt;     var node = document.getElementById(&#39;log-box&#39;);
+&gt; &gt;     var li = document.createElement(&#39;li&#39;)
+&gt; &gt;     li.appendChild(document.createTextNode(str));
+&gt; &gt;     node.appendChild(li);
+&gt; &gt; }
+&gt; &gt; 
+&gt; &gt; function clearLog() {
+&gt; &gt;     var node = document.getElementById(&#39;log-box&#39;);
+&gt; &gt;     while (node.firstChild) {
+&gt; &gt;         node.removeChild(node.firstChild);
+&gt; &gt;     }
+&gt; &gt; }
+&gt; &gt; 
+&gt; &gt; function isArray(obj) {
+&gt; &gt;     return obj &amp;&amp; !(obj.propertyIsEnumerable(&#39;length&#39;)) &amp;&amp; 
+&gt; &gt;         typeof obj === &#39;object&#39; &amp;&amp; typeof obj.length === &#39;number&#39;;
+&gt; &gt; };               
+&gt; &gt;</code><br>&gt; &gt;<br><br><br>我照着写了一个这样的页面：<br><br><iframe src="http://b-tree.top/testCopy.html" style="width:100%;height:100px;"></iframe>  
 
-<p>超好玩哈哈哈哈或或或或  </p>
-<blockquote>
-<p>而在这里<a href="https://www.zhihu.com/question/38140568" target="_blank" rel="noopener">https://www.zhihu.com/question/38140568</a>  </p>
-<p><a href="http://static.zhihu.com/static/revved/-/js/closure/common.d3bfcd50.js" target="_blank" rel="noopener">http://static.zhihu.com/static/revved/-/js/closure/common.d3bfcd50.js</a>  </p>
-<pre class="line-numbers language-js"><code class="language-js">
-<span class="token keyword">var</span> Qy <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">function</span> <span class="token function">d</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">"著作权归作者所有。"</span><span class="token punctuation">,</span>
-      <span class="token string">"商业转载请联系作者获得授权，非商业转载请注明出处。"</span><span class="token punctuation">,</span>
-      <span class="token string">"作者："</span> <span class="token operator">+</span> b<span class="token punctuation">,</span> <span class="token string">"链接："</span> <span class="token operator">+</span> a<span class="token punctuation">,</span> <span class="token string">"来源：知乎"</span><span class="token punctuation">,</span>
-      <span class="token string">""</span><span class="token punctuation">,</span> <span class="token string">""</span>
-    <span class="token punctuation">]</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token string">" div\x3e"</span> <span class="token operator">+</span> <span class="token function">d</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>
-        <span class="token string">" br /\x3e"</span><span class="token punctuation">)</span> <span class="token operator">+</span> a <span class="token operator">+</span>
-      <span class="token string">" /div\x3e"</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token keyword">function</span> <span class="token function">g</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> g <span class="token operator">=</span> z<span class="token punctuation">.</span><span class="token function">Kq</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-      m <span class="token operator">=</span> g <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>
-        z<span class="token punctuation">.</span>x<span class="token punctuation">)</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span><span class="token function">Fd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>m <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token punctuation">(</span><span class="token number">42</span> <span class="token operator">></span> m<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"object"</span> <span class="token operator">===</span> <span class="token keyword">typeof</span> a<span class="token punctuation">.</span>originalEvent
-        <span class="token punctuation">.</span>clipboardData <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>a<span class="token punctuation">.</span>originalEvent
-          <span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span>
-            <span class="token string">"text/html"</span><span class="token punctuation">,</span> <span class="token function">f</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span><span class="token function">Mf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> b<span class="token punctuation">,</span>
-              c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-          a<span class="token punctuation">.</span>originalEvent<span class="token punctuation">.</span>clipboardData
-          <span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token string">"text/plain"</span><span class="token punctuation">,</span> <span class="token function">d</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span>
-            c<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span> <span class="token operator">+</span> m<span class="token punctuation">)</span><span class="token punctuation">,</span>
-          <span class="token number">0</span> <span class="token operator">&lt;</span> a<span class="token punctuation">.</span>originalEvent<span class="token punctuation">.</span>clipboardData
-          <span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">"text/plain"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length
-        <span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        a<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span>
-      <span class="token punctuation">}</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>getSelection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        a <span class="token operator">=</span> g<span class="token punctuation">.</span><span class="token function">Mf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>
-          window<span class="token punctuation">.</span>$<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token function">f</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-          position<span class="token punctuation">:</span> <span class="token string">"fixed"</span><span class="token punctuation">,</span>
-          left<span class="token punctuation">:</span> <span class="token string">"-9999px"</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">appendTo</span><span class="token punctuation">(</span><span class="token string">"body"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        window<span class="token punctuation">.</span><span class="token function">getSelection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">selectAllChildren</span><span class="token punctuation">(</span>
-          n<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>
-          window<span class="token punctuation">.</span>setTimeout<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          g<span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-          n<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-  a <span class="token operator">&amp;&amp;</span> b <span class="token operator">&amp;&amp;</span> c <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>z<span class="token punctuation">.</span><span class="token function">Da</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span> <span class="token string">"http"</span><span class="token punctuation">)</span> <span class="token operator">||</span>
-    <span class="token punctuation">(</span>b <span class="token operator">=</span> window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>protocol <span class="token operator">+</span>
-      <span class="token string">"//"</span> <span class="token operator">+</span> window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>host <span class="token operator">+</span>
-      b<span class="token punctuation">)</span><span class="token punctuation">,</span>
-    a<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"copy"</span><span class="token punctuation">,</span> g<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>转自<a href="https://www.zhihu.com/people/Rufus/activities" target="_blank" rel="noopener">鲁小夫</a></p>
-</blockquote>
-<p>如果答案设置了不能复制，则阻止copy事件，并显示提示信息，如果复制的文本长度小于42的话，不会加上版权信息。  </p>
-<blockquote>
-<p>关于copy事件:<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/oncopy" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/oncopy</a><br><a href="http://codebits.glennjones.net/editing/setclipboarddata.htm" target="_blank" rel="noopener">http://codebits.glennjones.net/editing/setclipboarddata.htm</a>  </p>
-<blockquote>
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>oncopy属性用来获取或设置当前元素的copy事件的事件处理函数.  </p>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><pre><code>element.oncopy = functionRef;
-</code></pre><p>functionRef 是一个函数名或者函数表达式.  </p>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><pre><code>&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;oncopy示例演示&lt;/title&gt;
-
-&lt;script&gt;
-  function log(txt)
-  {
-    document.getElementById(&quot;log&quot;).appendChild(document.createTextNode(txt + &quot;\n&quot;));
-  }
-&lt;/script&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-&lt;div oncopy=&quot;log(&#39;复制被阻止!&#39;); return false;&quot;&gt;试着复制这句话!&lt;/div&gt;
-
-&lt;h3&gt;Log&lt;/h3&gt;
-&lt;textarea rows=&quot;15&quot; cols=&quot;80&quot; id=&quot;log&quot; readonly=&quot;true&quot;&gt;&lt;/textarea&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>上例演示了如何禁止复制浏览器中的一段话.  </p>
-<h2 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h2><p>当用户尝试复制选中元素或文本时会触发copy事件.  </p>
-</blockquote>
-<p>glennjones给出了更加复杂的js，包括OnCopy日志的提取</p>
-<blockquote>
-<ul>
-<li><p>Some of the current browsers support a clipboardData property as part of a copy event. This should allow you to set the clipboard data or append custom data as a user copies an object. The support is patchy and mostly incomplete. The IE interface is older than the rest, but has had support for a while where as Chrome and Safari support has only recently been added. With IE you can only set two fixed data types Text or URL.</p>
-</li>
-<li><p>When parts of this paragraph of text are copied an event should fire that alters the copied test. When pasted into the box below you should see a custom message. It will currently only work with IE Chrome and Safari. Try it out by copying and pasting this paragraph into the input box below.</p>
-<h2 id="The-code"><a href="#The-code" class="headerlink" title="The code"></a>The code</h2></li>
-</ul>
-<pre class="line-numbers language-js"><code class="language-js">window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'load'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
-    <span class="token keyword">var</span> node <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'edit-box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> copyNode <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'custom-copy'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    copyNode<span class="token punctuation">.</span>oncopy <span class="token operator">=</span><span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'copy'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span>
-                <span class="token string">'text/xcustom'</span><span class="token punctuation">,</span> <span class="token string">'Added this custom data at copy'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-            <span class="token keyword">var</span> setStatus <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span>
-                <span class="token string">'text/plain'</span><span class="token punctuation">,</span> <span class="token string">'This is not the text you copied, it '</span> <span class="token operator">+</span>
-                <span class="token string">'was changed by the copy event handler'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setData: '</span> <span class="token operator">+</span> setStatus<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            e<span class="token punctuation">.</span>returnValue <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-            <span class="token keyword">var</span> setStatus <span class="token operator">=</span> window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span>
-                <span class="token string">'Text'</span><span class="token punctuation">,</span> <span class="token string">'This is not the text you copied, it '</span> <span class="token operator">+</span>
-                <span class="token string">'was changed by the copy event handler'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setData: '</span> <span class="token operator">+</span> setStatus<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-    node<span class="token punctuation">.</span>onpaste <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'paste'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'event.clipboardData'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span>types<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'event.clipboardData.types'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-                <span class="token comment" spellcheck="true">// Look for a types property that is undefined</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isArray</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span>types<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'event.clipboardData.types is undefined'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-
-                <span class="token comment" spellcheck="true">// Loop the data store by type and display it</span>
-                <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-                <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span>types<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token keyword">var</span> key <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span>types<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-                    <span class="token keyword">var</span> val <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    <span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">': '</span> <span class="token operator">+</span> key <span class="token operator">+</span> <span class="token string">' - '</span> <span class="token operator">+</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    i<span class="token operator">++</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">// Look for access to data if types array is missing</span>
-                <span class="token keyword">var</span> text <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">'text/plain'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token keyword">var</span> url <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">'text/uri-list'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token keyword">var</span> html <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">'text/html'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token keyword">var</span> custom <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">'text/xcustom'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'text/plain - '</span> <span class="token operator">+</span> text<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>url <span class="token operator">!==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'text/uri-list - '</span> <span class="token operator">+</span> url<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>html <span class="token operator">!==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'text/html - '</span> <span class="token operator">+</span> html<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>custom <span class="token operator">!==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'text/xcustom - '</span> <span class="token operator">+</span> custom<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token comment" spellcheck="true">// IE event is attached to the window object</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'window.clipboardData'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">// The schema is fixed</span>
-            <span class="token keyword">var</span> text <span class="token operator">=</span> window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">'Text'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">var</span> url <span class="token operator">=</span> window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">'URL'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Text - '</span> <span class="token operator">+</span> text<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>url <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'URL - '</span> <span class="token operator">+</span> url<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token comment" spellcheck="true">// Needs a few msec to excute paste</span>
-        window<span class="token punctuation">.</span><span class="token function">setTimeout</span><span class="token punctuation">(</span>logContents<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">// Button events</span>
-    <span class="token keyword">var</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'clear-logs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    btn<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token function">clearLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">function</span> <span class="token function">logContents</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> node <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'edit-box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Current contents - '</span> <span class="token operator">+</span> node<span class="token punctuation">.</span>innerHTML<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">function</span> <span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> node <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'log-box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> li <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span>
-    li<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">createTextNode</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    node<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">function</span> <span class="token function">clearLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> node <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'log-box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>firstChild<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        node<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>firstChild<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">function</span> <span class="token function">isArray</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> obj <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span><span class="token function">propertyIsEnumerable</span><span class="token punctuation">(</span><span class="token string">'length'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> 
-        <span class="token keyword">typeof</span> obj <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> obj<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</blockquote>
-</blockquote>
-<p>我照着写了一个这样的页面：  </p>
-<p><iframe src="http://b-tree.top/testCopy.html" style="width:100%;height:100px;"></iframe>  </p>
-<textarea style="width:100%;height:200px;" placeholder="粘贴在这里试一试喵叽"></textarea>
 
             </div>
 
