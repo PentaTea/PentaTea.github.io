@@ -113,10 +113,10 @@
                 <blockquote>
 <p>著作权归罪歌moecopilot本人所有。商业转载请联系作者 QQ 1993713026 获得授权，非商业转载请注明出处。<br>Moecopilot is the original author. Please give credit to the original author when you use it elsewhere.  </p>
 </blockquote>
-<h3 id="在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的"><a href="#在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的" class="headerlink" title="在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的?"></a>在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的?</h3><h3 id="我很好奇"><a href="#我很好奇" class="headerlink" title="我很好奇"></a>我很好奇</h3><p><pre><br>著作权归作者所有。<br>商业转载请联系作者获得授权，非商业转载请注明出处。<br>作者：<br>链接：<br>来源：知乎<br></pre><br>和</p>
+<h1 id="在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的"><a href="#在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的" class="headerlink" title="在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的?"></a>在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的?</h1><h1 id="我很好奇"><a href="#我很好奇" class="headerlink" title="我很好奇"></a>我很好奇</h1><p><pre><br>著作权归作者所有。<br>商业转载请联系作者获得授权，非商业转载请注明出处。<br>作者：<br>链接：<br>来源：知乎<br></pre><br>和  </p>
 <p><pre><br>作者：<br>链接：<br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br></pre><br>说实话我觉得知乎和简书他俩的名字还挺押韵……<br>查了查，大致明白了这个玩意的原理</p>
 <blockquote>
-<p><a href="https://segmentfault.com/q/1010000003986612" target="_blank" rel="noopener">https://segmentfault.com/q/1010000003986612</a>  </p>
+<p>原文这里<a href="https://segmentfault.com/q/1010000003986612" target="_blank" rel="noopener">https://segmentfault.com/q/1010000003986612</a>  </p>
 <p><pre><br>大体思路：<br>答案区域监听copy事件，并阻止这个事件的默认行为。<br>获取选中的内容（<font color="red">window.getSelection()</font>）加上版权信息，<br>然后设置到剪切板（<font color="red">clipboardData.setData()</font>）。</pre><br>下面的代码实现了一个简单的DEMO  </p>
 <pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
 <span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
@@ -159,10 +159,231 @@
 <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>我设了一个测试网站，嵌入（iframe）在这里大家复制试一试啊qwq  </p>
-<p><iframe src="http://b-tree.top/TestCopy.html"></iframe><br>转自<a href="https://segmentfault.com/u/tiantian_" target="_blank" rel="noopener">tiantian</a>   </p>
+<p>转自<a href="https://segmentfault.com/u/tiantian_" target="_blank" rel="noopener">tiantian</a>  </p>
 </blockquote>
-<p><a href="https://www.zhihu.com/question/38140568" target="_blank" rel="noopener">https://www.zhihu.com/question/38140568</a></p>
+<p>我设了一个测试网站，嵌入（iframe）在这里了qwq  </p>
+<p><iframe src="http://b-tree.top/testCopy.html" style="width:100%;height:100px;"></iframe>  </p>
+<textarea style="width:100%;height:200px;" placeholder="粘贴在这里试一试喵叽"></textarea>
+
+<p>超好玩哈哈哈哈或或或或  </p>
+<blockquote>
+<p>而在这里<a href="https://www.zhihu.com/question/38140568" target="_blank" rel="noopener">https://www.zhihu.com/question/38140568</a>  </p>
+<p><a href="http://static.zhihu.com/static/revved/-/js/closure/common.d3bfcd50.js" target="_blank" rel="noopener">http://static.zhihu.com/static/revved/-/js/closure/common.d3bfcd50.js</a>  </p>
+<pre class="line-numbers language-js"><code class="language-js">
+<span class="token keyword">var</span> Qy <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">d</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">"著作权归作者所有。"</span><span class="token punctuation">,</span>
+      <span class="token string">"商业转载请联系作者获得授权，非商业转载请注明出处。"</span><span class="token punctuation">,</span>
+      <span class="token string">"作者："</span> <span class="token operator">+</span> b<span class="token punctuation">,</span> <span class="token string">"链接："</span> <span class="token operator">+</span> a<span class="token punctuation">,</span> <span class="token string">"来源：知乎"</span><span class="token punctuation">,</span>
+      <span class="token string">""</span><span class="token punctuation">,</span> <span class="token string">""</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">" div\x3e"</span> <span class="token operator">+</span> <span class="token function">d</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>
+        <span class="token string">" br /\x3e"</span><span class="token punctuation">)</span> <span class="token operator">+</span> a <span class="token operator">+</span>
+      <span class="token string">" /div\x3e"</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">function</span> <span class="token function">g</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> g <span class="token operator">=</span> z<span class="token punctuation">.</span><span class="token function">Kq</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      m <span class="token operator">=</span> g <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>
+        z<span class="token punctuation">.</span>x<span class="token punctuation">)</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span><span class="token function">Fd</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>m <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token punctuation">(</span><span class="token number">42</span> <span class="token operator">></span> m<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"object"</span> <span class="token operator">===</span> <span class="token keyword">typeof</span> a<span class="token punctuation">.</span>originalEvent
+        <span class="token punctuation">.</span>clipboardData <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>a<span class="token punctuation">.</span>originalEvent
+          <span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span>
+            <span class="token string">"text/html"</span><span class="token punctuation">,</span> <span class="token function">f</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span><span class="token function">Mf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> b<span class="token punctuation">,</span>
+              c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          a<span class="token punctuation">.</span>originalEvent<span class="token punctuation">.</span>clipboardData
+          <span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token string">"text/plain"</span><span class="token punctuation">,</span> <span class="token function">d</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span>
+            c<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span> <span class="token operator">+</span> m<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token number">0</span> <span class="token operator">&lt;</span> a<span class="token punctuation">.</span>originalEvent<span class="token punctuation">.</span>clipboardData
+          <span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">"text/plain"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length
+        <span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        a<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>getSelection<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        a <span class="token operator">=</span> g<span class="token punctuation">.</span><span class="token function">Mf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>
+          window<span class="token punctuation">.</span>$<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token function">f</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          position<span class="token punctuation">:</span> <span class="token string">"fixed"</span><span class="token punctuation">,</span>
+          left<span class="token punctuation">:</span> <span class="token string">"-9999px"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">appendTo</span><span class="token punctuation">(</span><span class="token string">"body"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        window<span class="token punctuation">.</span><span class="token function">getSelection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">selectAllChildren</span><span class="token punctuation">(</span>
+          n<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>
+          window<span class="token punctuation">.</span>setTimeout<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          g<span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          n<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  a <span class="token operator">&amp;&amp;</span> b <span class="token operator">&amp;&amp;</span> c <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>z<span class="token punctuation">.</span><span class="token function">Da</span><span class="token punctuation">(</span>b<span class="token punctuation">,</span> <span class="token string">"http"</span><span class="token punctuation">)</span> <span class="token operator">||</span>
+    <span class="token punctuation">(</span>b <span class="token operator">=</span> window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>protocol <span class="token operator">+</span>
+      <span class="token string">"//"</span> <span class="token operator">+</span> window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>host <span class="token operator">+</span>
+      b<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    a<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"copy"</span><span class="token punctuation">,</span> g<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>转自<a href="https://www.zhihu.com/people/Rufus/activities" target="_blank" rel="noopener">鲁小夫</a></p>
+</blockquote>
+<p>如果答案设置了不能复制，则阻止copy事件，并显示提示信息，如果复制的文本长度小于42的话，不会加上版权信息。  </p>
+<blockquote>
+<p>关于copy事件:<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/oncopy" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/oncopy</a><br><a href="http://codebits.glennjones.net/editing/setclipboarddata.htm" target="_blank" rel="noopener">http://codebits.glennjones.net/editing/setclipboarddata.htm</a>  </p>
+<blockquote>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>oncopy属性用来获取或设置当前元素的copy事件的事件处理函数.  </p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><pre><code>element.oncopy = functionRef;
+</code></pre><p>functionRef 是一个函数名或者函数表达式.  </p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;oncopy示例演示&lt;/title&gt;
+
+&lt;script&gt;
+  function log(txt)
+  {
+    document.getElementById(&quot;log&quot;).appendChild(document.createTextNode(txt + &quot;\n&quot;));
+  }
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div oncopy=&quot;log(&#39;复制被阻止!&#39;); return false;&quot;&gt;试着复制这句话!&lt;/div&gt;
+
+&lt;h3&gt;Log&lt;/h3&gt;
+&lt;textarea rows=&quot;15&quot; cols=&quot;80&quot; id=&quot;log&quot; readonly=&quot;true&quot;&gt;&lt;/textarea&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>上例演示了如何禁止复制浏览器中的一段话.  </p>
+<h2 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h2><p>当用户尝试复制选中元素或文本时会触发copy事件.  </p>
+</blockquote>
+<p>glennjones给出了更加复杂的js，包括OnCopy日志的提取</p>
+<blockquote>
+<ul>
+<li><p>Some of the current browsers support a clipboardData property as part of a copy event. This should allow you to set the clipboard data or append custom data as a user copies an object. The support is patchy and mostly incomplete. The IE interface is older than the rest, but has had support for a while where as Chrome and Safari support has only recently been added. With IE you can only set two fixed data types Text or URL.</p>
+</li>
+<li><p>When parts of this paragraph of text are copied an event should fire that alters the copied test. When pasted into the box below you should see a custom message. It will currently only work with IE Chrome and Safari. Try it out by copying and pasting this paragraph into the input box below.</p>
+<h2 id="The-code"><a href="#The-code" class="headerlink" title="The code"></a>The code</h2></li>
+</ul>
+<pre class="line-numbers language-js"><code class="language-js">window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'load'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">var</span> node <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'edit-box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> copyNode <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'custom-copy'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    copyNode<span class="token punctuation">.</span>oncopy <span class="token operator">=</span><span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'copy'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span>
+                <span class="token string">'text/xcustom'</span><span class="token punctuation">,</span> <span class="token string">'Added this custom data at copy'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">var</span> setStatus <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span>
+                <span class="token string">'text/plain'</span><span class="token punctuation">,</span> <span class="token string">'This is not the text you copied, it '</span> <span class="token operator">+</span>
+                <span class="token string">'was changed by the copy event handler'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setData: '</span> <span class="token operator">+</span> setStatus<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            e<span class="token punctuation">.</span>returnValue <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> setStatus <span class="token operator">=</span> window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span>
+                <span class="token string">'Text'</span><span class="token punctuation">,</span> <span class="token string">'This is not the text you copied, it '</span> <span class="token operator">+</span>
+                <span class="token string">'was changed by the copy event handler'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'setData: '</span> <span class="token operator">+</span> setStatus<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    node<span class="token punctuation">.</span>onpaste <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'paste'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'event.clipboardData'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span>types<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'event.clipboardData.types'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                <span class="token comment" spellcheck="true">// Look for a types property that is undefined</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isArray</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span>types<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'event.clipboardData.types is undefined'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+
+                <span class="token comment" spellcheck="true">// Loop the data store by type and display it</span>
+                <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span>types<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">var</span> key <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span>types<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token keyword">var</span> val <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">': '</span> <span class="token operator">+</span> key <span class="token operator">+</span> <span class="token string">' - '</span> <span class="token operator">+</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    i<span class="token operator">++</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// Look for access to data if types array is missing</span>
+                <span class="token keyword">var</span> text <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">'text/plain'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">var</span> url <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">'text/uri-list'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">var</span> html <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">'text/html'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">var</span> custom <span class="token operator">=</span> e<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">'text/xcustom'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'text/plain - '</span> <span class="token operator">+</span> text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>url <span class="token operator">!==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'text/uri-list - '</span> <span class="token operator">+</span> url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>html <span class="token operator">!==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'text/html - '</span> <span class="token operator">+</span> html<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>custom <span class="token operator">!==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'text/xcustom - '</span> <span class="token operator">+</span> custom<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">// IE event is attached to the window object</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'window.clipboardData'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// The schema is fixed</span>
+            <span class="token keyword">var</span> text <span class="token operator">=</span> window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">'Text'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> url <span class="token operator">=</span> window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token string">'URL'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Text - '</span> <span class="token operator">+</span> text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>url <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'URL - '</span> <span class="token operator">+</span> url<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// Needs a few msec to excute paste</span>
+        window<span class="token punctuation">.</span><span class="token function">setTimeout</span><span class="token punctuation">(</span>logContents<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// Button events</span>
+    <span class="token keyword">var</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'clear-logs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    btn<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">clearLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">logContents</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> node <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'edit-box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Current contents - '</span> <span class="token operator">+</span> node<span class="token punctuation">.</span>innerHTML<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> node <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'log-box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> li <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'li'</span><span class="token punctuation">)</span>
+    li<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">createTextNode</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    node<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>li<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">clearLog</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> node <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'log-box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>node<span class="token punctuation">.</span>firstChild<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        node<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>node<span class="token punctuation">.</span>firstChild<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">isArray</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> obj <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span><span class="token function">propertyIsEnumerable</span><span class="token punctuation">(</span><span class="token string">'length'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> 
+        <span class="token keyword">typeof</span> obj <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> obj<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</blockquote>
+</blockquote>
+<p>我照着写了一个这样的页面：  </p>
+<p><iframe src="http://b-tree.top/testCopy.html" style="width:100%;height:100px;"></iframe>  </p>
+<textarea style="width:100%;height:200px;" placeholder="粘贴在这里试一试喵叽"></textarea>
 
             </div>
 
