@@ -27,7 +27,8 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -112,86 +113,71 @@
                 <blockquote>
 <p>著作权归罪歌moecopilot本人所有。商业转载请联系作者 QQ 1993713026 获得授权，非商业转载请注明出处。<br>Moecopilot is the original author. Please give credit to the original author when you use it elsewhere.  </p>
 </blockquote>
-<h1 id="在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的"><a href="#在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的" class="headerlink" title="在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的?"></a>在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的?</h1><h1 id="我很好奇"><a href="#我很好奇" class="headerlink" title="我很好奇"></a>我很好奇</h1><pre>
-著作权归作者所有。
+<h1 id="在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的"><a href="#在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的" class="headerlink" title="在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的?"></a>在知乎或者简书复制的文本为什么会自带一些版权声明，这个功能是如何实现的?</h1><h1 id="我很好奇"><a href="#我很好奇" class="headerlink" title="我很好奇"></a>我很好奇</h1><pre><code>著作权归作者所有。
 商业转载请联系作者获得授权，非商业转载请注明出处。
 作者：
 链接：
 来源：知乎
-</pre>
-和  
-<pre>
-作者：
+</code></pre><p>和  </p>
+<pre><code>作者：
 链接：
 來源：简书
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-</pre>
-说实话我觉得知乎和简书他俩的名字还挺押韵……  
-查了查，大致明白了这个玩意的原理
->原文这里<https: segmentfault.com="" q="" 1010000003986612="">  
-<pre>
-大体思路：
+</code></pre><p>说实话我觉得知乎和简书他俩的名字还挺押韵……<br>查了查，大致明白了这个玩意的原理<br>原文这里<a href="https://segmentfault.com/q/1010000003986612" target="_blank" rel="noopener">https://segmentfault.com/q/1010000003986612</a>  </p>
+<pre><code>大体思路：
 答案区域监听copy事件，并阻止这个事件的默认行为。
-获取选中的内容（<font color="red">window.getSelection()</font>）加上版权信息，
-然后设置到剪切板（<font color="red">clipboardData.setData()</font>）。</pre>
-下面的代码实现了一个简单的DEMO  
-```js
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>test</title>
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
-<body>
-    <div id="answer">测试数据<b>test</b></div>
-    <script>
-        function setClipboardText(event){ 
-            event.preventDefault();
-            var node = document.createElement('div');
-            //对documentfragment不熟，不知道怎么获取里面的内容，用了一个比较笨的方式
-            node.appendChild(window.getSelection().getRangeAt(0).cloneContents());
-            var htmlData = '<div>著作权归作者所有。<br />' 
-                            + '商业转载请联系作者获得授权，非商业转载请注明出处。<br />'
-                            + '作者：tiantian<br />链接：http://segmentfault.com/u/tiantian_<br />'
-                            + '来源：segmentfault<br /><br />' 
-                            + node.innerHTML 
-                            + '</div>';
-            var textData = '著作权归作者所有。\n' 
-                            + '商业转载请联系作者获得授权，非商业转载请注明出处。\n'
-                            + '作者：tiantian\n链接：http://segmentfault.com/u/tiantian_\n'
-                            + '来源：segmentfault\n\n' 
-                            + window.getSelection().getRangeAt(0);
-            if(event.clipboardData){  
-                event.clipboardData.setData("text/html", htmlData); 
-                event.clipboardData.setData("text/plain",textData);
-            }
-            else if(window.clipboardData){  
-                return window.clipboardData.setData("text", textData);  
-            }  
-        };  
-        var answer = document.getElementById("answer");
-        answer.addEventListener('copy',function(e){
-            setClipboardText(e);
-        });
-    </script>
-</body>
-</html>
-```  
-转自[tiantian](https://segmentfault.com/u/tiantian_)  
-
-
-我设了一个测试网站，嵌入（iframe）在这里了qwq  
-<iframe src="http://b-tree.top/testCopy" style="width:100%;height:100px;"></iframe>  
+获取选中的内容（&lt;font color = red &gt;window.getSelection()&lt;/font&gt;）加上版权信息，
+然后设置到剪切板（&lt;font color = red &gt;clipboardData.setData()&lt;/font&gt;）。
+</code></pre><p>下面的代码实现了一个简单的DEMO  </p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>head<span class="token operator">></span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>title<span class="token operator">></span>test<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"answer"</span><span class="token operator">></span>测试数据<span class="token operator">&lt;</span>b<span class="token operator">></span>test<span class="token operator">&lt;</span><span class="token operator">/</span>b<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script<span class="token operator">></span>
+        <span class="token keyword">function</span> <span class="token function">setClipboardText</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">{</span> 
+            event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> node <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//对documentfragment不熟，不知道怎么获取里面的内容，用了一个比较笨的方式</span>
+            node<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span><span class="token function">getSelection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRangeAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">cloneContents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> htmlData <span class="token operator">=</span> <span class="token string">'&lt;div>著作权归作者所有。&lt;br />'</span> 
+                            <span class="token operator">+</span> <span class="token string">'商业转载请联系作者获得授权，非商业转载请注明出处。&lt;br />'</span>
+                            <span class="token operator">+</span> <span class="token string">'作者：tiantian&lt;br />链接：http://segmentfault.com/u/tiantian_&lt;br />'</span>
+                            <span class="token operator">+</span> <span class="token string">'来源：segmentfault&lt;br />&lt;br />'</span> 
+                            <span class="token operator">+</span> node<span class="token punctuation">.</span>innerHTML 
+                            <span class="token operator">+</span> <span class="token string">'&lt;/div>'</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> textData <span class="token operator">=</span> <span class="token string">'著作权归作者所有。\n'</span> 
+                            <span class="token operator">+</span> <span class="token string">'商业转载请联系作者获得授权，非商业转载请注明出处。\n'</span>
+                            <span class="token operator">+</span> <span class="token string">'作者：tiantian\n链接：http://segmentfault.com/u/tiantian_\n'</span>
+                            <span class="token operator">+</span> <span class="token string">'来源：segmentfault\n\n'</span> 
+                            <span class="token operator">+</span> window<span class="token punctuation">.</span><span class="token function">getSelection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRangeAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>clipboardData<span class="token punctuation">)</span><span class="token punctuation">{</span>  
+                event<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token string">"text/html"</span><span class="token punctuation">,</span> htmlData<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+                event<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token string">"text/plain"</span><span class="token punctuation">,</span>textData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">)</span><span class="token punctuation">{</span>  
+                <span class="token keyword">return</span> window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token string">"text"</span><span class="token punctuation">,</span> textData<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+            <span class="token punctuation">}</span>  
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>  
+        <span class="token keyword">var</span> answer <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"answer"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        answer<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'copy'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">setClipboardText</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>转自<a href="https://segmentfault.com/u/tiantian_" target="_blank" rel="noopener">tiantian</a>  </p>
+<p>我设了一个测试网站，嵌入（iframe）在这里了qwq  </p>
+<p><iframe src="http://b-tree.top/testCopy" style="width:100%;height:100px;"></iframe>  </p>
 <textarea style="width:100%;height:200px;" placeholder="粘贴在这里试一试喵叽"></textarea>
 
-超好玩哈哈哈哈或或或或  
-
-而在这里<https: 38140568="" www.zhihu.com="" question="">  
-
-http://static.zhihu.com/static/revved/-/js/closure/common.d3bfcd50.js  
-
-
+<p>超好玩哈哈哈哈或或或或  </p>
+<p>而在这里<a href="https://www.zhihu.com/question/38140568" target="_blank" rel="noopener">https://www.zhihu.com/question/38140568</a>  </p>
+<p><a href="http://static.zhihu.com/static/revved/-/js/closure/common.d3bfcd50.js" target="_blank" rel="noopener">http://static.zhihu.com/static/revved/-/js/closure/common.d3bfcd50.js</a>  </p>
 <pre>
 
  var Qy = function(a, b, c) {
@@ -413,7 +399,7 @@ http://static.zhihu.com/static/revved/-/js/closure/common.d3bfcd50.js
 <p>那下一步就是要在整个博客中应用版权代码了。。  </p>
 <p>由于我是用hexo搭建的这个blog，理论上来说需要在主题中更改模板。</p>
 <p>于是这篇就先到这里，下一篇我们来研究如何更改hexo的主题文件~</p>
-</https:></https:>
+
             </div>
 
             <!-- Post Comments -->
