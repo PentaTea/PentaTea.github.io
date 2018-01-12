@@ -118,46 +118,46 @@
 <blockquote>
 <p><a href="https://segmentfault.com/q/1010000003986612" target="_blank" rel="noopener">https://segmentfault.com/q/1010000003986612</a>  </p>
 <p><pre><br>大体思路：<br>答案区域监听copy事件，并阻止这个事件的默认行为。<br>获取选中的内容（<font color="red">window.getSelection()</font>）加上版权信息，<br>然后设置到剪切板（<font color="red">clipboardData.setData()</font>）。</pre><br>下面的代码实现了一个简单的DEMO  </p>
-<pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>answer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>测试数据<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span>
-        function setClipboardText(event){ 
-            event.preventDefault();
-            var node = document.createElement('div');
-            //对documentfragment不熟，不知道怎么获取里面的内容，用了一个比较笨的方式
-            node.appendChild(window.getSelection().getRangeAt(0).cloneContents());
-            var htmlData = '<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>著作权归作者所有。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>' 
-                            + '商业转载请联系作者获得授权，非商业转载请注明出处。<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>'
-                            + '作者：tiantian<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>链接：http://segmentfault.com/u/tiantian_<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>'
-                            + '来源：segmentfault<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span>' 
-                            + node.innerHTML 
-                            + '<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>';
-            var textData = '著作权归作者所有。\n' 
-                            + '商业转载请联系作者获得授权，非商业转载请注明出处。\n'
-                            + '作者：tiantian\n链接：http://segmentfault.com/u/tiantian_\n'
-                            + '来源：segmentfault\n\n' 
-                            + window.getSelection().getRangeAt(0);
-            if(event.clipboardData){  
-                event.clipboardData.setData("text/html", htmlData); 
-                event.clipboardData.setData("text/plain",textData);
-            }
-            else if(window.clipboardData){  
-                return window.clipboardData.setData("text", textData);  
-            }  
-        };  
-        var answer = document.getElementById("answer");
-        answer.addEventListener('copy',function(e){
-            setClipboardText(e);
-        });
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>head<span class="token operator">></span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>title<span class="token operator">></span>test<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"answer"</span><span class="token operator">></span>测试数据<span class="token operator">&lt;</span>b<span class="token operator">></span>test<span class="token operator">&lt;</span><span class="token operator">/</span>b<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>script<span class="token operator">></span>
+        <span class="token keyword">function</span> <span class="token function">setClipboardText</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">{</span> 
+            event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> node <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//对documentfragment不熟，不知道怎么获取里面的内容，用了一个比较笨的方式</span>
+            node<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span><span class="token function">getSelection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRangeAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">cloneContents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> htmlData <span class="token operator">=</span> <span class="token string">'&lt;div>著作权归作者所有。&lt;br />'</span> 
+                            <span class="token operator">+</span> <span class="token string">'商业转载请联系作者获得授权，非商业转载请注明出处。&lt;br />'</span>
+                            <span class="token operator">+</span> <span class="token string">'作者：tiantian&lt;br />链接：http://segmentfault.com/u/tiantian_&lt;br />'</span>
+                            <span class="token operator">+</span> <span class="token string">'来源：segmentfault&lt;br />&lt;br />'</span> 
+                            <span class="token operator">+</span> node<span class="token punctuation">.</span>innerHTML 
+                            <span class="token operator">+</span> <span class="token string">'&lt;/div>'</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> textData <span class="token operator">=</span> <span class="token string">'著作权归作者所有。\n'</span> 
+                            <span class="token operator">+</span> <span class="token string">'商业转载请联系作者获得授权，非商业转载请注明出处。\n'</span>
+                            <span class="token operator">+</span> <span class="token string">'作者：tiantian\n链接：http://segmentfault.com/u/tiantian_\n'</span>
+                            <span class="token operator">+</span> <span class="token string">'来源：segmentfault\n\n'</span> 
+                            <span class="token operator">+</span> window<span class="token punctuation">.</span><span class="token function">getSelection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRangeAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span>clipboardData<span class="token punctuation">)</span><span class="token punctuation">{</span>  
+                event<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token string">"text/html"</span><span class="token punctuation">,</span> htmlData<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+                event<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token string">"text/plain"</span><span class="token punctuation">,</span>textData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">)</span><span class="token punctuation">{</span>  
+                <span class="token keyword">return</span> window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token string">"text"</span><span class="token punctuation">,</span> textData<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+            <span class="token punctuation">}</span>  
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>  
+        <span class="token keyword">var</span> answer <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"answer"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        answer<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'copy'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">setClipboardText</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>我设了一个测试网站，嵌入（iframe）在这里大家复制试一试啊qwq  </p>
 <p><iframe src="http://b-tree.top/testCopy.html"></iframe><br>转自<a href="https://segmentfault.com/u/tiantian_" target="_blank" rel="noopener">tiantian</a>   </p>
