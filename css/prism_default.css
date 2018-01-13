@@ -37,7 +37,7 @@ code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-select
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
   text-shadow: none;
-  background: #6a51e6;
+  background: #cde6c7;
 }
 
 /* Code blocks */
@@ -142,7 +142,7 @@ code.language-scss,
 }
 
 pre > code.highlight {
-  outline: .4em solid #8a75f5;
+  outline: .4em solid #a3cf62;
   outline-offset: .4em;
 }
 
