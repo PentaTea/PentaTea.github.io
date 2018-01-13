@@ -27,8 +27,7 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -36,7 +35,7 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/prism_default.css" />
 <link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
@@ -50,80 +49,239 @@
 </header>
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special" >
-            <ul class="menu links" >
-			<!-- Homepage  主页  --> 
+			<ul class="menu links" >
+			<!-- Homepage  主页  -->
 			<li >
-	            <a href="/" rel="nofollow">主页</a>
-	        </li>
-			<!-- categories_name  分类   --> 
-	        
-	        <li class="active">
-	            <a href="#s1">分类</a>
-	                    <ul class="submenu">
-	                        <li>
-	                        <a class="category-link" href="/categories/code/">code</a>
-	                    </ul>
-	        </li>
-	        
-	        <!-- archives  归档   --> 
-	        
-	        <li class="active">
-	            <a href="#s1">归档</a>
-	                    <ul class="submenu">
-	                        <li>
-	                        <a class="archive-link" href="/archives/2018/01/">January 2018</a>
-	                    </ul>
-	        </li>
-	        
-	        
-		        <!-- Pages 自定义   -->
-		        
-		        <li>
-		            <a href="/tag/" title="标签">
-		                标签
-		            </a>
-		        </li>
-		        
-		        <li>
-		            <a href="/gallery/" title="图库">
-		                图库
-		            </a>
-		        </li>
-		        
+				<a href="/" rel="nofollow">主页</a>
+			</li>
+			<!-- categories_name  分类   -->
+			
+			<li class="active">
+				<a href="#s1">分类</a>
+						<ul class="submenu">
+							<li>
+							<a class="category-link" href="/categories/code/">code</a>
+						</ul>
+			</li>
+			
+			<!-- archives  归档   -->
+			
+			<li class="active">
+				<a href="#s1">归档</a>
+						<ul class="submenu">
+							<li>
+							<a class="archive-link" href="/archives/2018/01/">January 2018</a>
+						</ul>
+			</li>
+			
+
+				<!-- Pages 自定义   -->
+				
+				<li>
+					<a href="/tag/" title="标签">
+						标签
+					</a>
+				</li>
+				
+				<li>
+					<a href="/gallery/" title="图库">
+						图库
+					</a>
+				</li>
+				
 
 
-            </ul>
-            <!-- icons 图标   -->
+			</ul>
+			<!-- icons 图标   -->
 			<ul class="icons">
-		            
-		                <li><a href="https://github.com/moecopilot" class="icon fa-github"><span class="label">GitHub</span></a></li>
-		            
-		            
-		            
-		            
+					
+						<li><a href="https://github.com/moecopilot" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					
+					
+					
+					
 			</ul>
 </nav>
 
+
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(/gallery/setThemes.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >现有hexo主题的不足</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >hexo主题的不足与修改</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h1 id="测试标题"><a href="#测试标题" class="headerlink" title="测试标题"></a>测试标题</h1><p>在这篇文章里我会汇总一下现在我使用的hexo主题（<font color="blue"><a href="http://miccall.tech" target="_blank" rel="noopener">MICCALL by Miccall Metro</a></font>)的一些不足之处，<br>因为我想在下面来单独讨论改进的各种方案，也方便随时增加条目。<br>下列每一条无序列表之后我都会预留一个序号和post的指针，<br>以便归纳。</p>
+                <p>在这篇文章里我会汇总一下现在我使用的hexo主题（<font color="blue"><a href="http://miccall.tech" target="_blank" rel="noopener">MICCALL by Miccall Metro</a></font>)的一些不足之处，<br>因为我想在下面来单独讨论改进的各种方案，也方便随时增加条目。<br>下列每一项列表之上我都会预留指针，<br>以便归纳。</p>
+<blockquote>
 <ul>
-<li><p>在主页上会显示categories而不显示tag。由于categories只能填一条而具体文章无法链接tag，就很难根据某文章的tag来链接其他文章。  </p>
+<li><p><a href="#移动链接标签至文章列表标签的外面">文章链接被固有在了标题。点击图片都没有用的好伐！我第一次可是点了半天图片还以为我引以为豪的麒麟臂坏了啊啊！！</a></p>
 </li>
-<li><p>全站背景图的适配有毒。我放了只公主殿下，在Mac这边美得我流口水，直到我用我的小米暖手宝打开一看。。日您！只剩下一只眼睛了！！！！！  </p>
+<li><p><a href="#找到categories的描述并照葫芦画瓢写一个tag的显示就行">在主页上会显示categories而不显示tag。由于categories只能填一条而具体文章无法链接tag，就很难根据某文章的tag来链接其他文章。</a>  </p>
 </li>
-<li><p>gallery里面图片的适配不对。同上条，日您，日您！  </p>
+<li><p><a href="">全站背景图的适配有毒。我放了只公主殿下，在Mac这边美得我流口水，直到我用我的小米暖手宝打开一看。。日您！只剩下一只眼睛了！！！！！</a>  </p>
 </li>
-<li><p>gallery的缩略图漏出了黑底。咱的安全裤呢？？</p>
+<li><p><a href="">gallery里面图片的适配不对。同上条，日您，日您！</a>  </p>
 </li>
-<li><p>文章链接被固有在了标题。点击图片都没有用的好伐！我第一次可是点了半天图片还以为我引以为豪的麒麟臂坏了啊啊！！</p>
+<li><p><a href="">gallery的缩略图漏黑底。咱的安全裤呢？？</a></p>
+</li>
+<li><p><a href="">我要往里面加上版权信息啊一复制就哔哔自动加上版权信息的那种QAQ</a>  </p>
 </li>
 </ul>
-<p>点击<a href="#测试标题">这里</a>跳转到测试标题的位置</p>
+</blockquote>
+<p>首先我们需要了解一下hexo的Themes是如何运作的，我选择了这篇文章（<a href="https://segmentfault.com/a/1190000006057336" target="_blank" rel="noopener">https://segmentfault.com/a/1190000006057336</a>）来入门，当然以我的聪明才智，并没有细看只是打开当做一个补充罢了。<br>Themes文件夹里的主题文件夹里的目录  </p>
+<pre><code>.
+├── _config.yml   //记录主题配置信息
+├── layout        //存放布局模板文件
+│   └── _partial  //布局文件中可共用的模板
+└── source        //静态资源文件夹
+    ├── css
+    ├── fonts
+    ├── js
+    └── sass
+</code></pre><p>于是把整个目录拖到brackets里修改就可以了  </p>
+<h1 id="移动链接标签至文章列表标签的外面"><a href="#移动链接标签至文章列表标签的外面" class="headerlink" title="移动链接标签至文章列表标签的外面"></a>移动链接标签至文章列表标签的外面</h1><pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page_title<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(&lt;%= post.thumbnail %>)</span><span class="token punctuation">;</span><span class="token property">background-position</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span> <span class="token property">background-repeat</span><span class="token punctuation">:</span>no-repeat<span class="token punctuation">;</span> <span class="token property">background-size</span><span class="token punctuation">:</span>cover<span class="token punctuation">;</span><span class="token property">-moz-background-size</span><span class="token punctuation">:</span>cover<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!--标题--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- url_for(post.path) %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page_title_text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> &lt;%= post.title %> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!--段落--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>改成  </p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>&lt;%- url_for(post.path) %<span class="token punctuation">></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page_title<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url(&lt;%= post.thumbnail %>)</span><span class="token punctuation">;</span><span class="token property">background-position</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span> <span class="token property">background-repeat</span><span class="token punctuation">:</span>no-repeat<span class="token punctuation">;</span> <span class="token property">background-size</span><span class="token punctuation">:</span>cover<span class="token punctuation">;</span><span class="token property">-moz-background-size</span><span class="token punctuation">:</span>cover<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!--标题--></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>page_title_text<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> &lt;%= post.title %> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!--段落--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+</code></pre>
+<h1 id="找到categories的描述并照葫芦画瓢写一个tag的显示就行"><a href="#找到categories的描述并照葫芦画瓢写一个tag的显示就行" class="headerlink" title="找到categories的描述并照葫芦画瓢写一个tag的显示就行"></a>找到categories的描述并照葫芦画瓢写一个tag的显示就行</h1><p><code>command⌘ + F</code> 查找 categories ，找到了这个  </p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post_category-link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://localhost:4000/categories/Algorithm/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%-</span> <span class="token attr-name">list_categories(post.categories,</span> <span class="token attr-name">{</span>
+        <span class="token attr-name"><span class="token namespace">show_count:</span></span> <span class="token attr-name">false,</span>
+        <span class="token attr-name"><span class="token namespace">class:</span></span> <span class="token attr-name">'post_category',</span>
+        <span class="token attr-name"><span class="token namespace">style:</span></span> <span class="token attr-name">'none'</span>
+    <span class="token attr-name">})</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>                              
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>中的这个函数 <code>list_categories</code> ，<br>在官方文档（<a href="https://hexo.io/zh-cn/docs/helpers.html#列表" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/helpers.html#列表</a>）中的定义：</p>
+<blockquote>
+<h2 id="list-categories"><a href="#list-categories" class="headerlink" title="list_categories"></a>list_categories</h2><p>插入分类列表。</p>
+<pre><code>&lt;%- list_categories([options]) %&gt;
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:left">默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>orderby</td>
+<td style="text-align:center">分类排列方式</td>
+<td style="text-align:left">name</td>
+</tr>
+<tr>
+<td>order</td>
+<td style="text-align:center">分类排列顺序。1, asc 升序；-1, desc 降序。</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td>show_count</td>
+<td style="text-align:center">显示每个分类的文章总数</td>
+<td style="text-align:left">true</td>
+</tr>
+<tr>
+<td>style</td>
+<td style="text-align:center">分类列表的显示方式。使用 list 以无序列表（unordered list）方式显示。</td>
+<td style="text-align:left">list</td>
+</tr>
+<tr>
+<td>separator</td>
+<td style="text-align:center">分类间的分隔符号。只有在 style 不是 list 时有用。</td>
+<td style="text-align:left">,</td>
+</tr>
+<tr>
+<td>depth</td>
+<td style="text-align:center">要显示的分类层级。0 显示所有层级的分类；-1 和 0 很类似，但是显示不分层级；1 只显示第一层的分类。</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td>class</td>
+<td style="text-align:center">分类列表的 class 名称。</td>
+<td style="text-align:left">category</td>
+</tr>
+<tr>
+<td>transform</td>
+<td style="text-align:center">改变分类名称显示方法的函数</td>
+<td style="text-align:left">none</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>而且果然存在tag函数，定义如下。  </p>
+<h2 id="list-tags"><a href="#list-tags" class="headerlink" title="list_tags"></a>list_tags</h2><p>插入标签列表。</p>
+<p><code>&lt;%- list_tags([options]) %&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th style="text-align:center">描述</th>
+<th style="text-align:left">预设值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>orderby</td>
+<td style="text-align:center">标签排列方式</td>
+<td style="text-align:left">name</td>
+</tr>
+<tr>
+<td>order</td>
+<td style="text-align:center">标签排列顺序。1, asc 升序；-1, desc 降序。</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td>show_count</td>
+<td style="text-align:center">显示每个标签的文章总数</td>
+<td style="text-align:left">true</td>
+</tr>
+<tr>
+<td>style</td>
+<td style="text-align:center">标签列表的显示方式。使用 list 以无序列表（unordered list）方式显示。</td>
+<td style="text-align:left">list</td>
+</tr>
+<tr>
+<td>separator</td>
+<td style="text-align:center">标签间的分隔符号。只有在 style 不是 list 时有用。</td>
+<td style="text-align:left">,</td>
+</tr>
+<tr>
+<td>class</td>
+<td style="text-align:center">标签列表的 class 名称。</td>
+<td style="text-align:left">tag</td>
+</tr>
+<tr>
+<td>transform</td>
+<td style="text-align:center">改变标签名称显示方法的函数</td>
+<td style="text-align:left">none</td>
+</tr>
+<tr>
+<td>amount</td>
+<td style="text-align:center">要显示的标签数量（0 = 无限制）</td>
+<td style="text-align:left">0</td>
+</tr>
+</tbody>
+</table>
+<p>那么现在就好办了。用我从没学过html的聪明大脑很快就把tag补上了呢<br>……真没学过。<br>于是在categories的后面写了一个h6  </p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>post_tag-link<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://localhost:4000/tags/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%-</span> <span class="token attr-name">list_tags(post.tags,</span> <span class="token attr-name">{</span>
+        <span class="token attr-name"><span class="token namespace">show_count:</span></span> <span class="token attr-name">false,</span>
+        <span class="token attr-name"><span class="token namespace">class:</span></span> <span class="token attr-name">'post_tag',</span>
+        <span class="token attr-name"><span class="token namespace">style:</span></span> <span class="token attr-name">'none'</span>
+    <span class="token attr-name">})</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>嗯嗯完美渲染。  </p>
 
             </div>
 
@@ -225,6 +383,7 @@ $('.btn_click_load').click(function() {
         </div>
     </div>
 </body>
+
 
 
 

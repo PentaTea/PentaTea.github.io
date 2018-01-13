@@ -27,8 +27,7 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -36,7 +35,7 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/prism_default.css" />
 <link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
@@ -50,59 +49,60 @@
 </header>
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special" >
-            <ul class="menu links" >
-			<!-- Homepage  主页  --> 
+			<ul class="menu links" >
+			<!-- Homepage  主页  -->
 			<li >
-	            <a href="/" rel="nofollow">主页</a>
-	        </li>
-			<!-- categories_name  分类   --> 
-	        
-	        <li class="active">
-	            <a href="#s1">分类</a>
-	                    <ul class="submenu">
-	                        <li>
-	                        <a class="category-link" href="/categories/code/">code</a>
-	                    </ul>
-	        </li>
-	        
-	        <!-- archives  归档   --> 
-	        
-	        <li class="active">
-	            <a href="#s1">归档</a>
-	                    <ul class="submenu">
-	                        <li>
-	                        <a class="archive-link" href="/archives/2018/01/">January 2018</a>
-	                    </ul>
-	        </li>
-	        
-	        
-		        <!-- Pages 自定义   -->
-		        
-		        <li>
-		            <a href="/tag/" title="标签">
-		                标签
-		            </a>
-		        </li>
-		        
-		        <li>
-		            <a href="/gallery/" title="图库">
-		                图库
-		            </a>
-		        </li>
-		        
+				<a href="/" rel="nofollow">主页</a>
+			</li>
+			<!-- categories_name  分类   -->
+			
+			<li class="active">
+				<a href="#s1">分类</a>
+						<ul class="submenu">
+							<li>
+							<a class="category-link" href="/categories/code/">code</a>
+						</ul>
+			</li>
+			
+			<!-- archives  归档   -->
+			
+			<li class="active">
+				<a href="#s1">归档</a>
+						<ul class="submenu">
+							<li>
+							<a class="archive-link" href="/archives/2018/01/">January 2018</a>
+						</ul>
+			</li>
+			
+
+				<!-- Pages 自定义   -->
+				
+				<li>
+					<a href="/tag/" title="标签">
+						标签
+					</a>
+				</li>
+				
+				<li>
+					<a href="/gallery/" title="图库">
+						图库
+					</a>
+				</li>
+				
 
 
-            </ul>
-            <!-- icons 图标   -->
+			</ul>
+			<!-- icons 图标   -->
 			<ul class="icons">
-		            
-		                <li><a href="https://github.com/moecopilot" class="icon fa-github"><span class="label">GitHub</span></a></li>
-		            
-		            
-		            
-		            
+					
+						<li><a href="https://github.com/moecopilot" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					
+					
+					
+					
 			</ul>
 </nav>
+
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(/gallery/copy.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
@@ -129,7 +129,7 @@
 获取选中的内容（&lt;font color = red &gt;window.getSelection()&lt;/font&gt;）加上版权信息，
 然后设置到剪切板（&lt;font color = red &gt;clipboardData.setData()&lt;/font&gt;）。
 </code></pre><p>下面的代码实现了一个简单的DEMO  </p>
-<pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
+<pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
 <span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
 <span class="token operator">&lt;</span>head<span class="token operator">></span>
     <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span>
@@ -169,7 +169,7 @@
     <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <p>转自<a href="https://segmentfault.com/u/tiantian_" target="_blank" rel="noopener">tiantian</a>  </p>
 <p>我设了一个测试网站，嵌入（iframe）在这里了qwq  </p>
 <p><iframe src="http://b-tree.top/testCopy" style="width:100%;height:100px;"></iframe>  </p>
@@ -278,7 +278,7 @@
 <li><p>When parts of this paragraph of text are copied an event should fire that alters the copied test. When pasted into the box below you should see a custom message. It will currently only work with IE Chrome and Safari. Try it out by copying and pasting this paragraph into the input box below.</p>
 <h2 id="The-code"><a href="#The-code" class="headerlink" title="The code"></a>The code</h2></li>
 </ul>
-<pre class="line-numbers language-js"><code class="language-js">window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'load'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-js"><code class="language-js">window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'load'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
     <span class="token keyword">var</span> node <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'edit-box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">var</span> copyNode <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'custom-copy'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -389,7 +389,7 @@
     <span class="token keyword">return</span> obj <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span><span class="token function">propertyIsEnumerable</span><span class="token punctuation">(</span><span class="token string">'length'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> 
         <span class="token keyword">typeof</span> obj <span class="token operator">===</span> <span class="token string">'object'</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> obj<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 </blockquote>
 </blockquote>
 <p>我写了一个这样的页面(有些浏览器不管用QAQ)：  </p>
@@ -500,6 +500,7 @@ $('.btn_click_load').click(function() {
         </div>
     </div>
 </body>
+
 
 
 

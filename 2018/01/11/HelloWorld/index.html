@@ -27,8 +27,7 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-<link rel="stylesheet" href="/css/prism.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -36,7 +35,7 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/prism_default.css" />
 <link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
@@ -50,59 +49,60 @@
 </header>
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special" >
-            <ul class="menu links" >
-			<!-- Homepage  主页  --> 
+			<ul class="menu links" >
+			<!-- Homepage  主页  -->
 			<li >
-	            <a href="/" rel="nofollow">主页</a>
-	        </li>
-			<!-- categories_name  分类   --> 
-	        
-	        <li class="active">
-	            <a href="#s1">分类</a>
-	                    <ul class="submenu">
-	                        <li>
-	                        <a class="category-link" href="/categories/code/">code</a>
-	                    </ul>
-	        </li>
-	        
-	        <!-- archives  归档   --> 
-	        
-	        <li class="active">
-	            <a href="#s1">归档</a>
-	                    <ul class="submenu">
-	                        <li>
-	                        <a class="archive-link" href="/archives/2018/01/">January 2018</a>
-	                    </ul>
-	        </li>
-	        
-	        
-		        <!-- Pages 自定义   -->
-		        
-		        <li>
-		            <a href="/tag/" title="标签">
-		                标签
-		            </a>
-		        </li>
-		        
-		        <li>
-		            <a href="/gallery/" title="图库">
-		                图库
-		            </a>
-		        </li>
-		        
+				<a href="/" rel="nofollow">主页</a>
+			</li>
+			<!-- categories_name  分类   -->
+			
+			<li class="active">
+				<a href="#s1">分类</a>
+						<ul class="submenu">
+							<li>
+							<a class="category-link" href="/categories/code/">code</a>
+						</ul>
+			</li>
+			
+			<!-- archives  归档   -->
+			
+			<li class="active">
+				<a href="#s1">归档</a>
+						<ul class="submenu">
+							<li>
+							<a class="archive-link" href="/archives/2018/01/">January 2018</a>
+						</ul>
+			</li>
+			
+
+				<!-- Pages 自定义   -->
+				
+				<li>
+					<a href="/tag/" title="标签">
+						标签
+					</a>
+				</li>
+				
+				<li>
+					<a href="/gallery/" title="图库">
+						图库
+					</a>
+				</li>
+				
 
 
-            </ul>
-            <!-- icons 图标   -->
+			</ul>
+			<!-- icons 图标   -->
 			<ul class="icons">
-		            
-		                <li><a href="https://github.com/moecopilot" class="icon fa-github"><span class="label">GitHub</span></a></li>
-		            
-		            
-		            
-		            
+					
+						<li><a href="https://github.com/moecopilot" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					
+					
+					
+					
 			</ul>
 </nav>
+
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(/gallery/helloworld.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
@@ -157,14 +157,14 @@
 <p>上传配置<br><code>hexo deploy</code></p>
 <p>至此，只需每次把文章放入source文件夹中对应的文件夹再<br><code>hexo clean</code><br><code>hexo generate</code><br><code>hexo deploy</code><br>就可以了</p>
 <p>hexo的常用命令有  </p>
-<pre class="line-numbers language-bash"><code class="language-bash">hexo new <span class="token string">"postName"</span> <span class="token comment" spellcheck="true">#新建文章</span>
+<pre class=" language-bash"><code class="language-bash">hexo new <span class="token string">"postName"</span> <span class="token comment" spellcheck="true">#新建文章</span>
 hexo new page <span class="token string">"pageName"</span> <span class="token comment" spellcheck="true">#新建页面</span>
 hexo generate <span class="token comment" spellcheck="true">#生成静态页面至public目录</span>
 hexo server <span class="token comment" spellcheck="true">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span>
 hexo deploy <span class="token comment" spellcheck="true">#将.deploy目录部署到GitHub</span>
 hexo <span class="token function">help</span>  <span class="token comment" spellcheck="true">#查看帮助</span>
 hexo version  <span class="token comment" spellcheck="true">#查看Hexo的版本</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</code></pre>
 <h3 id="以上。"><a href="#以上。" class="headerlink" title="以上。"></a>以上。</h3><blockquote>
 <p>著作权归罪歌moecopilot本人所有。商业转载请联系作者 QQ 1993713026 获得授权，非商业转载请注明出处。<br>Moecopilot is the original author. Please give credit to the original author when you use it elsewhere.  </p>
 </blockquote>
@@ -269,6 +269,7 @@ $('.btn_click_load').click(function() {
         </div>
     </div>
 </body>
+
 
 
 
