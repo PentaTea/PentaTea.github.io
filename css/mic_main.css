@@ -50,16 +50,16 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: #212931;
-			background-image :url("../../images/bg.jpg") ;
-			background-position: center; 
-			background-repeat: no-repeat; 
-			background-attachment:fixed; 
-			background-size: cover; 
-			-webkit-background-size: cover;/* 兼容Webkit内核浏览器如Chrome和Safari */ 
-			-o-background-size: cover;/* 兼容Opera */ 
-			zoom: 1; 
-			z-index: -1;
+			background-color: #feeeed;
+			/*background-image :url("../../images/bg.jpg") ;*/
+			background-position: center;
+			background-repeat: no-repeat;
+			background-attachment:fixed;
+			background-size: cover;
+			-webkit-background-size: cover;/* 兼容Webkit内核浏览器如Chrome和Safari */
+			-o-background-size: cover;/* 兼容Opera */
+			zoom: 1;
+			opacity:0;
 		}
 		#wrapper.fade-in:before {
 			-moz-pointer-events: none;
@@ -353,7 +353,7 @@
 	}
 
 	body {
-		background-color: #1e252d;
+		background-color: #feeeed;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1339,7 +1339,7 @@
 
 			#nav ul.links li {
 				display: block;
-				color: #fff;
+				color: #000000;
 				padding-left: 0;
 			}
 
@@ -1349,7 +1349,7 @@
 					-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 					transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 					display: block;
-					color: #fff;
+					color: #000000;
 					font-size: 0.8rem;
 					outline: none;
 					padding: 0 2rem;
@@ -1364,7 +1364,7 @@
 				}
 
 					#nav ul.links li.active a {
-						color: #fff;
+						color: #000000;
 					}
 						#nav ul.links li.active ul.submenu li a {
 							color: #000;
@@ -1407,7 +1407,7 @@
 	}
 
 		#main > * {
-			
+
 			border-top: solid 2px #eeeeee;
 			margin: 0;
 		}
@@ -2061,7 +2061,7 @@
 		#navPanel li > a
 		{
 			color: #000;
-		} 
+		}
 		#navPanel .links {
 			list-style: none;
 			padding-left: 0;
@@ -2192,7 +2192,7 @@
 /*---------mainfirst------------------*/
 /* Me */
 	#main{
-		margin-bottom: 0.5rem;	
+		margin-bottom: 0.5rem;
 	}
 	#me{
 		margin-bottom: 2rem;
@@ -2288,7 +2288,7 @@
 
 			#me {
 				padding: 0;
-				margin-right: 3rem; 
+				margin-right: 3rem;
 				height: 20em;
 			}
 
@@ -2410,7 +2410,7 @@
 
 			#main {
 				background: none;
-				
+
 			}
 
 			.panel {
@@ -2430,7 +2430,7 @@
 			#me .pic {
 				width: 100%;
 				padding-bottom: 1rem;
-				
+
 			}
 
 				#me .pic img {
@@ -4181,7 +4181,7 @@
 		link_box-shadow: 0 2px 0 0 #e5e5e5;
 		margin: 0 0 2em 0;
 		padding-bottom: 2rem;
-		
+
 	}
 
 		.link_box > :last-child {
@@ -4209,7 +4209,7 @@
 
 			.link_box.features .features-row section {
 				float: left;
-				
+
 				width: 50%;
 			}
 
@@ -4317,7 +4317,7 @@
 	.page_title{
 		position: relative;
 		width: 100%;
-		height:300px; 
+		height:300px;
 		_height:expression(this.height > 400 ? "400px" : this.height);
 	}
 	.page_title h1{
@@ -4393,13 +4393,13 @@
 	.post-content h2{
 		text-transform:none;
 		font-family: FZLT;
-		font-size: 2.5rem;	
+		font-size: 2.5rem;
 	}
 	.post-content h3{
 		text-transform:none;
 		font-family: FZLT;
 		font-size: 2rem;
-		
+
 	}
 	.post-content h4{
 		text-transform:none;
@@ -4425,13 +4425,13 @@
 		color: #00E5EE;
 	}
 	.post-content img{
-		max-width:100%; 
+		max-width:100%;
 	}
 	.post_page_title_img a{
 		position:absolute;
 		text-shadow:6px 5px 10px #000;
 		padding-top: 20%;
-		border-bottom:none; 
+		border-bottom:none;
 	}
 	.post_page_title_img a > h2{
 		font-size: 3rem;

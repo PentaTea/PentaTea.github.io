@@ -858,7 +858,7 @@
 		#gallery_thumbnails article {
 			position: relative;
 			width: 50%;
-			background: #101010;
+			background: #fff;
 			outline: 0;
 		}
 
@@ -987,6 +987,7 @@
 		-ms-transition: opacity 0.75s ease, width 0.75s ease;
 		transition: opacity 0.75s ease, width 0.75s ease;
 		position: absolute;
+		background-position:center center;
 		top: 0;
 		width: calc(100% - 22.5em);
 		height: 100%;
@@ -1051,7 +1052,6 @@
 				height: 6em;
 				margin-top: -3em;
 				background-image: url("images/arrow.svg");
-				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
 				cursor: pointer;
@@ -1100,19 +1100,21 @@
 				#viewer .slide .caption h2, #viewer .slide .caption h3, #viewer .slide .caption h4, #viewer .slide .caption h5, #viewer .slide .caption h6 {
 					color: #fff;
 				}
-
+/* 喵喵喵 */
 			#viewer .slide .image {
 				-moz-transition: opacity 0.5s ease-in-out;
 				-webkit-transition: opacity 0.5s ease-in-out;
 				-ms-transition: opacity 0.5s ease-in-out;
 				transition: opacity 0.5s ease-in-out;
-				position: absolute;
-				top: 0;
+				background-position: center center;
+				/*top: 0;
 				left: 0;
+				margin-left:auto;
+				margin-right:auto;*/
 				width: 100%;
 				height: 100%;
 				background-repeat: no-repeat;
-				background-size: cover;
+				background-size: contain;
 				opacity: 0;
 			}
 

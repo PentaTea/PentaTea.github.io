@@ -179,6 +179,7 @@ var gallery_main = (function($) { var _ = {
 					})
 					.trigger('resize');
 
+
 	},
 
 	/**
@@ -432,15 +433,15 @@ var gallery_main = (function($) { var _ = {
 					// Slide.
 
 						// Create elements.
-	 						s.$slide = $('<div class="slide"><div class="caption"></div><div class="image"></div></div>');
+							 s.$slide = $('<div class="slide"><div class="caption"></div><div id="miao" class="image"></div></div>');
 
-	 					// Image.
- 							s.$slideImage = s.$slide.children('.image');
+						 // Image.
+							 s.$slideImage = s.$slide.children('.image');
 
- 							// Set background stuff.
-	 							s.$slideImage
-		 							.css('background-image', '')
-		 							.css('background-position', ($thumbnail.data('position') || 'center'));
+							 // Set background stuff.
+								 s.$slideImage
+									 .css('background-image', '')
+									 .css('background-position', ( 'center center'));
 
 						// Caption.
 							s.$slideCaption = s.$slide.find('.caption');
