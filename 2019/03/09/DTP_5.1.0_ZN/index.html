@@ -1,0 +1,288 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    B-Tree
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+        <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_default.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">罪歌moecopilot</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special zz" >
+			<ul class="menu links" >
+			<!-- Homepage  主页  -->
+			<li >
+				<a href="/" rel="nofollow">主页</a>
+			</li>
+			<!-- categories_name  分类   -->
+			
+			<li class="active">
+				<a href="#s1">分类</a>
+						<ul class="submenu">
+							<li>
+							<a class="category-link" href="/categories/code/">code</a>
+						</ul>
+			</li>
+			
+			<!-- archives  归档   -->
+			
+			<li class="active">
+				<a href="#s1">归档</a>
+						<ul class="submenu">
+							<li>
+							<a class="archive-link" href="/archives/2019/03/">March 2019</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a>
+						</ul>
+			</li>
+			
+
+				<!-- Pages 自定义   -->
+				
+				<li>
+					<a href="/tag/" title="标签">
+						标签
+					</a>
+				</li>
+				
+				<li>
+					<a href="/gallery/" title="图库">
+						图库
+					</a>
+				</li>
+				
+
+
+			</ul>
+			<!-- icons 图标   -->
+			<ul class="icons">
+					
+						<li><a href="https://github.com/moecopilot" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					
+					
+					
+					
+			</ul>
+</nav>
+
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(/gallery/DTP.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Design and Technology Portfolio v5.1.0_ZN</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h2 id="这是张家平的设计与技术组合"><a href="#这是张家平的设计与技术组合" class="headerlink" title="这是张家平的设计与技术组合"></a>这是张家平的设计与技术组合</h2><blockquote>
+<p>夏酷暑，冬严寒，春也不死吾心，心所向，将所成。</p>
+</blockquote>
+<h4 id="注意：由于本文章自英文原版翻译而来，可能有语序或用词的不当，请谅解"><a href="#注意：由于本文章自英文原版翻译而来，可能有语序或用词的不当，请谅解" class="headerlink" title="注意：由于本文章自英文原版翻译而来，可能有语序或用词的不当，请谅解"></a><font color="red">注意：由于本文章自英文原版翻译而来，可能有语序或用词的不当，请谅解</font></h4><h4 id="若您是在离线文件或图片当中阅读到了此内容，请注意："><a href="#若您是在离线文件或图片当中阅读到了此内容，请注意：" class="headerlink" title="若您是在离线文件或图片当中阅读到了此内容，请注意："></a><font color="red">若您是在离线文件或图片当中阅读到了此内容，请注意：</font></h4><blockquote>
+<font color="red">1.由于本地文件的局限性，文章排版可能出错。 </font><br><font color="red">2.离线状态下此文章有可能不是最新版。</font><br><font color="blue">若您有网络条件，我推荐您移步至“ <a href="http://b-tree.top/DTP" target="_blank" rel="noopener">http://b-tree.top/DTP</a> ”以获得最新的内容和原始版面，我相信这会为您带来更好的阅读体验。</font>
+
+</blockquote>
+<p>你好，我是张家平，我致力于设计高度模块化，集成化，通用的，具有技术可行性以及商业可行性的产品解决方案。我追求扁平化，设计感，为客户提供最美好的用户体验经历。我享受提出并解决问题的过程以及其成就感，来磨练自己的技术水平以迎接更难的挑战。</p>
+<p>我将在这个文件里为你展现我的专业技能，设计理念，个人和团队项目能力以及学习潜能，并分为以下三个板块：</p>
+<blockquote>
+<ul>
+<li>以时间线广度优先的学习经历介绍，重点为发展，趋势与进程。</li>
+<li>单个项目组成的深度优先介绍，重点是我的思考，设计理念与技术能力。</li>
+<li>个人潜能分析以及总结。</li>
+</ul>
+</blockquote>
+<h3 id="入门编程"><a href="#入门编程" class="headerlink" title="入门编程"></a>入门编程</h3><p>兴趣使然，我在小学五年级时接触了编程方面的知识，梦想当一名黑客，我知道这意味着什么，也知道在聊天软件中所谓活跃的所谓黑客大多都是脚本小子而已。我决定脚踏实地一步一步的来，由此开始自学 C 语言以及 web。</p>
+<p>初中一年级时，我虽有在游戏外挂，计算工具上面的需求，可苦于没有构建项目以及 C 语言窗体的能力，我第一次感觉到了理论技术与实践需求之间的差距，由此逐渐生长出了现在这种实用主义的自学模式和学习观。</p>
+<p>一直到初中毕业，我执着于锻炼自己解决问题的能力，不断的提出需求，利用一切方法来解决它。期间我接触到了很多优秀的朋友和老师，发现并没有一种通用的全局最优算法或者最简编程工具，无论何种编程语言和工具都有其适合的领域与功能，我广泛的去了解各种工具和算法，虽不求甚解，但旨在提出需求时可以快速分析其适用的语言和算法，直到现在变成了一种习惯。</p>
+<h3 id="专注设计"><a href="#专注设计" class="headerlink" title="专注设计"></a>专注设计</h3><p>高中一年级时我接触了信息竞赛 NOIP，学习了大概一年的算法，虽有成绩，但只是更加确定了我在设计上的兴趣，于是我退出竞赛并专心于设计。</p>
+<p>高中二年级时，我独自创办了 B-Tree Design Studio 开始接单一些大学生的毕业设计，这时我发现我已经拥有一些构建中小型项目的能力了，并坚定当前“用什么学什么”的自学方式，有了构建商业化产品自己挣钱的想法。</p>
+<p>我开始自己提出需求，不断学习，制作，迭代，重构…… 天生的设计感与完美主义使我不仅在功能技术方面要求极高，在外形，实用性，兼容耦合，集成化等方面也要做到全局最优，这个时期是我的高速发展期，几个月时间从完全不会电路成长到学会并应用了数十片 MCU 与数百片 IC，PCB 设计也愈发得心应手。</p>
+<p>贫穷使人进步，我在单片机，IC 选型以及设计成本优化方面下了很多功夫，期望以最小的资源和时间成本达到最优的效果，也有了不错的成就（现在至少不会没钱吃饭了）。</p>
+<p>以上便是我以时间角度书写的学习和项目历程，在下面，我选择了一些可以代表我的设计思考以及能力的项目，予以呈现给你。</p>
+<h3 id="AR-眼镜"><a href="#AR-眼镜" class="headerlink" title="AR 眼镜"></a>AR 眼镜</h3><ul>
+<li>目的：<br>1.将一些必须一直监视的数据或需要双手把持的检测器数据方便的显示在眼前。<br>2.信息提醒的可视化。<ul>
+<li>例如：<br>可将万用表数据直接浮动于眼前并加以处理，更加安全；<br>pid 调参时直接读取数据并绘图显示，手指滑动更改参数；<br>连接手机后对手机提示进行收集并分析显示等。</li>
+</ul>
+</li>
+<li>需求：置于眼前的浮动屏幕，有信息提示，数据采集与显示，触摸，拍照，蓝牙等功能。</li>
+<li>技术难点：<br>1.成本难以优化；<br>2.ble 通知传输需手机端配合；<br>3.单色 oled 不好看，多色贵而且尺寸不合；<br>4.树莓派实时性不够；<br>等。</li>
+</ul>
+<div style="display:flex;align-items:flex-end;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    <img src="/gallery/ar_glass/1.jpg" width="80%"><br>  </div><br></div>
+
+<p>众所周知，一个屏幕在你眼前很近的地方，你是无法看清楚它的。但神奇的是，如果屏幕或投影的成像与菲涅尔透镜的距离等于其焦距，将会有平行光进入眼球，而当它被大脑捕获之后感觉就像是一个浮动在无限远处的一个屏幕，你能同时看清面前的东西和这个屏幕。</p>
+<div style="display:flex;align-items:center;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    <img src="/gallery/ar_glass/printing.jpg" width="85%"><br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    这是我的第一个产品设计项目，没有经验的我做了充足的可行性分析。即便如此，我还是遇到了很多问题，比如如果每次迭代都要交付工厂，不仅价格昂贵还会影响到设计周期与迭代速度。工欲善其事必先利其器，我拼装了一台3D打印机用来快速实现设计，它在以后的设计中也帮了我许多。<br>  </div><br></div>
+
+<div style="display:flex;align-items:center;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    <img src="/gallery/ar_glass/2.jpg" width="50%"><br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    <img src="/gallery/ar_glass/4.jpg" width="90%"><br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    <img src="/gallery/ar_glass/3.jpg" width="50%"><br>  </div><br></div>
+
+<p>项目前期，我设计了可滑动的外壳和在外壳上的多个定位点，做出试验机型来确定尺寸和之后的的设计方案。为了开发方便，我选择用树莓派作为眼镜的主机，并尽量使用 C 语言和 Python 编写程序，以便后期移植 stm32 平台。阵列分布 TTP223 模块来检测手指触摸，并为其设计了手势算法。由于相对 spi 总线开发简单，我学习了 iic 总线协议，用其与 oled 模块通讯，连接 PCF8574 模块来扩展 GPIO。</p>
+<div style="display:flex;align-items:flex-end;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    <img src="/gallery/ar_glass/pcb.png" width="90%"><br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    <img src="/gallery/ar_glass/shell.jpg" width="90%"><br>  </div><br></div>
+
+<p>项目中期，我用 IP5306 芯片来做电源管理模块，并在淘宝上联系到了合适的电池厂家。之后我学习了 PCB 制图，在立创 EDA 上做了一个兼容树莓派并方便移植 stm32 的扩展版，把需要用到的器件集成到了一起。在外壳设计大体成型的基础上，我增加了一个用 A4988 驱动的微型步进电机帮助菲涅尔透镜调整焦距，来确保近视也能看清图像。</p>
+<div style="display:flex;align-items:flex-end;width:100%"><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="/gallery/ar_glass/5.jpg" width="80%"><br>  </div><br>    <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="/gallery/ar_glass/6.jpg" width="80%"><br>  </div><br></div>
+
+<blockquote>
+<p>由于图像失真和屏幕刷新，实际效果优于此照片效果。</p>
+</blockquote>
+<p>我本计划后期要使用 stm32f407 来压低成本以及增高实时性，用步进电机调整半透半反镜角度。甚至都已经联系好了可以量产彩色 oled 的厂家。但由于资金原因，这个项目只能无限期停滞，即使我迭代几十次才打一个样板来确定开发方向，竭力避免资源浪费与消耗，但我还是无法承受在没有资金帮助情况下的无限投入。我这时才明白了，必须要先挣到钱才能支持技术研发，于是我把目光投向了下一个项目。</p>
+<h3 id="树脂夜灯"><a href="#树脂夜灯" class="headerlink" title="树脂夜灯"></a>树脂夜灯</h3><ul>
+<li>目的：夜灯</li>
+<li>需求：无极调光，柔和光源，无触点，需内置电池，充电系统方便简约，工艺简单。</li>
+<li>技术难点：<br>1.空间资源难以优化；<br>2.光源散热问题；<br>3.ic 选型与控制难；<br>4.如何设计用户体验良好的浸入式控制系统；<br>等。</li>
+</ul>
+<p>滴胶是一种用树脂和相应固化剂配制的胶水，具有粘度低，透明度高，耐黄变，抗折性好等特点，被许多人用来制作工艺品。这种工艺品在灯光下会有非常优良的显示效果，而脱离灯光后会相对差很多，许多人还为此购买了展示台。当时我发现市场上并没有成型的环氧树脂与电路混合产品，便想设计出一款赏心悦目的夜灯来赚钱。</p>
+<p>我先是学习了滴胶工艺品的制作方法，后联系了一些厂家并最终选择了 SGL8022w 模块来充当主控。我的最初设计完全是用各种模块拼起来的，体积大，制作困难，成本还高，我决定先制作出初步的试验机型，再去优化设计。而由于滴胶流动的特性，我无法为其设计 microUSb 接口，最终只剩下磁吸接口与无线充电两项可行方案。最终经过一系列测试与分析，我选择了相对昂贵但更加稳定简便的无线充电方案，并用 IP5306 连接它和锂电池。敲定方案后不久，第一款试验机就做出来了，个人感觉超级丑。</p>
+<div style="display:flex;align-items:center;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    <div style="display:flex;align-items:center;justify-content:center"><br>      <img src="\gallery\night_light\1-1.jpg" width="50%"><br>    </div><br>    <div style="display:flex;align-items:center;justify-content:center"><br>      <img src="\gallery\night_light\1-2.jpg" width="50%"><br>    </div><br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    <img src="\gallery\night_light\1-3.jpg" width="80%"><br>  </div><br></div>
+
+<p>我认为这么丑有两个原因，第一是光强不够，第二是发光面积不够大。我设计了 PCB 并进行了多次迭代尝试，用均光板和亚克力菲涅尔透镜作为散光设备，用多光源增加光强，但效果都不尽人意。</p>
+<div style="display:flex;align-items:flex-end;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    <img src="\gallery\night_light\1-4.jpg" width="80%"><br>    我最初设计的多光源 PCB<br>  </div><br></div>
+
+<p>我开始寻找适合我这款夜灯的光源，用 blender 建模做光线追踪运算，跑去深圳华强北逐一进行尝试，最终发现效果最好的有以下两种：</p>
+<div style="display:flex;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%;"><br>    <img src="\gallery\night_light\2-1.jpg" width="80%"><br>    高强度的SMD ( Surface Mounted Devices ) LED<br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%;"><br>    <img src="\gallery\night_light\2-2.jpg" width="80%"><br>    COB ( Chip On Board Light ) 的面光源 LED<br>  </div><br></div>
+
+<p>考虑到项目需求，我选择了强度更高，发光更柔和的 COB LED 作为光源。为了驱动它我需要 12v 300mA 的供电系统和效率更高的散热系统。我用 IP5306 输出了 5V 电压，并用 PL7512A 升压至 12V，发现并不能支持这么大的电流，后来我换用了 MC34063 模块暂时解决了这个问题，不过发热更严重了。</p>
+<div style="display:flex;align-items:flex-end;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    <img src="\gallery\night_light\3-1.jpg" width="80%"><br>    为了散热，我甚至在PCB画上了冰之妖精，毕竟大家PID调参的时候也都很相信玄学。<br>  </div>
+
+<p></p></div><p></p>
+<p>我用 TTP223 增加了 IP5306 电源的触摸开关并连接至 SGL8022w，以此设计了新版的 PCB。经过几次测试之后我把所有器件焊接到了 PCB 上。这时突然出现了 led 间歇性的频闪并充不进电的情况，触摸按钮也不管用了。而后经过实验，我把问题锁定在了触摸模块与 SGL8022 控制芯片的连接上。其体现为分开完全正常，而连到一起之后却无法工作。后来我经过学习和讨论，猜想并证明了这个问题的原因：因为 SGL8022w 和 TTP223 芯片的触摸引脚都是利用张弛振荡器计算方波频率来检测人体电容，而当两个引脚接在一起时由于初始时钟不同，导致了两个芯片互相触发的人间惨剧。要想解决这个问题只能设计两个按钮把他们分开或者实现用一个主机控制他们的使能，很显然前者并不符合我扁平化的设计理念。</p>
+<p>因为对尺寸和成本的要求，我最终选择了 ms 系列单片机的 ms82f1402 作为主控，接受来自触摸模块的状态，来调控 IP5306 和 MC34063 的使能并输出 PWM 信号给三极管，继而控制灯珠的开关和亮度。</p>
+<p>由此，我的夜灯设计就基本成型了。这时我便需要一个非常漂亮的，能够配得上我的夜灯的开关。然后很遗憾我并没有找到我想要的。于是我准备做一个出来。</p>
+<h3 id="全彩呼吸灯触摸开关模块"><a href="#全彩呼吸灯触摸开关模块" class="headerlink" title="全彩呼吸灯触摸开关模块"></a>全彩呼吸灯触摸开关模块</h3><ul>
+<li>目的：通用触摸开关</li>
+<li>需求：接口全面且方便连接耦合，输出功能多，接口调试方便，个性化程度高且自定义方便，漂亮，成本低，量产简单等。</li>
+<li>技术难点：<br>1.集成度达不到要求，尺寸要求过高，保证物料成本的情况下主板设计<strong>及其</strong>困难；<br>2.TTP223 触摸芯片的灵敏度和抗干扰度达不到要求；<br>3.ms82f1402 单片机性能达不到要求，而 ms83f 系单片机尺寸太大；<br>4.5050 尺寸的 ws2812 灯珠时序位不明确，帧片段丢包严重；<br>5.MC34063 升压芯片的电流不够，体积太大，考虑更换；<br>6.算法效率受设备制约；<br>etc…</li>
+</ul>
+<p>起初我只想做一个通用的有呼吸灯的开关。于是我便设计了第一版开关模块。它是由 5050 尺寸的 ws2812，ms82f1402 单片机，ttp223 触摸芯片，IP5306 电源管理芯片，ldo，三极管，状态灯构成，尺寸为 40*0.8mm</p>
+<div style="display:flex;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    <img src="\gallery\switch_module\1-1.jpg" width="90%"><br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;"><br>    <img src="\gallery\switch_module\1-2.jpg" width="90%"><br>  </div>
+
+<p></p></div><p></p>
+<p>但由于它太小了，很多器件挤在了一起，很不好焊接而且很容易就会导致严重的短路事故以至于烧毁芯片。这时的我已经有了初步的设计经验，不会像以前那样手忙脚乱了。我设计了时间规划并做了完备的设计计划，同时进行着设计与优化。</p>
+<p>首先，为了能节省时间先一步开始软件编写，我用面包板和洞洞板搭建了一个简易的 ms82f1402 开发平台，并连接了我需要使用的一系列器件模块，我在开发软件的同时记录下问题与需求，不断迭代着 pcb 的布局。等待 pcb 同时这些问题也帮助我更改器件选型，比如将 MC34063 改为最新的 sh1208 升压模块，既节省了成本又解决了发热和电流不稳的问题。再比如我更改了数十次 ldo 的选型，找到了尺寸最小，相对便宜还运行稳定的 SC662K-3.3V 芯片。</p>
+<div style="display:flex;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\switch_module\2-1.jpg" width="90%"><br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\switch_module\2-2.jpg" width="90%"><br>  </div>
+
+<p></p></div><p></p>
+<p>我为夜灯模块设计了接口，用来对接开关模块。我还自行设计了纳米级时序帮助 ws2812 传输数据位，解决了网上示例的丢包问题。</p>
+<div style="display:flex;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\switch_module\3-1.jpg" width="90%"><br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\switch_module\3-2.jpg" width="90%"><br>  </div>
+
+<p></p></div><p></p>
+<p>这时我发现当前的开关模块完全可以代替此前设计的夜灯 PCB 设计了，只需要调试好相应的 PWM 输出，便能达到相与夜灯模块相同甚至更加完美的效果，只要我能保持这个尺寸与功能性。</p>
+<p>我已经不满足做一个普通的开关，我想构建任何人都可以使用的，可以跟大多数设计耦合的，好看并且能够个性化的开关模块。我在软件方面下了大功夫，几乎用上了所有定时器和中断，分时复用用了 4 个 GPIO 控制了 12 个 led 的独立状态，尝试了频分复用的数据传递，尝试压榨这款 0.2 人民币的单片机的所有资源。</p>
+<div style="display:flex;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\switch_module\4-1.png" width="70%"><br>  </div><br></div>
+
+<p>在这期间我保持使用了 Google 代码风格，并越来越体会到代码风格以及注释，变量名等信息的重要性。即便是使用没有关键字 class 的 C 语言编写，我依旧选择了偏面向对象的编程思想，高耦合，低内聚。我还设计了类似嵌入式系统的周期内时间调度以及功能模块化。</p>
+<div style="display:flex;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\switch_module\5-1.png" width="90%"><br>    算法过程单周期功能化<br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\switch_module\5-2.png" width="90%"><br>    命名规范化，注释多<br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\switch_module\5-3.png" width="90%"><br>    设计模块化，输出模式由硬件置位调整<br>  </div>
+
+<p></p></div><p></p>
+<p>在个性化方面，我利用十二个 led 与用户交流，让用户可以自己设定或导入色彩值以及各项设定并将它们储存在 EEPROM 中。模块的实际输出方式与电压等设定也可由出厂硬件引脚反馈或置位来决定，这进一步简化并增强了用户体验。</p>
+<div style="display:flex;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\switch_module\5-4.png" width="90%"><br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\switch_module\5-5.png" width="90%"><br>  </div>
+
+<p></p></div><p></p>
+<p>我还为我对用户们提供了我在设计中为了实际运算而写出的计算程序帮助他们自定义输出，还为他们写出了一套 API 说明，也正在实现 PC 端的 GUI 图形订单界面。</p>
+<div style="display:flex;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\switch_module\6-1.png" width="70%"><br>  </div><br></div>
+
+<p>我就不信卖不出去了。</p>
+<p>下一步我将使用更小的贴片布局以构建更宽的铜线，来适应更多的设计。我将用运放和比较器来实现触摸功能的集成化以及个性化，并开通更多的输出模式来满足更多的需求。敬请拭目以待……</p>
+<p>以上三个只是我比较有代表性的项目，除此之外还有很多，比如用联盛德的 W600 模块化到极致的物联探测组件，用 electron-vue 构建的扁平化窗体模板，esp8266 开发板构建的 wifi-killer ，用 hexo 自动构建的静态博客等就不再展开说明了。</p>
+<p>甚至我在写这篇文章的同时又萌生动机，构建出了一个更方便的，可以插入在 Markdown 语言中的图片组件，它已经用在此篇文章里了，但还不够精简和方便。之后我会去学习 Node.js，不久应该会作为一个 npm 包加入我的博客：</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">ExImg</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/\{([^{}()]+)\}\(([^{}()]+)\)/g</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>match<span class="token punctuation">,</span> $<span class="token number">1</span><span class="token punctuation">,</span> $<span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token string">'&lt;div style="display:flex;width:100%;"> &lt;div style = "display:flex;flex-direction:column;align-items:center;width:100%" >&lt;img src = "'</span> <span class="token operator">+</span>
+      $<span class="token number">1</span> <span class="token operator">+</span>
+      <span class="token string">'"width = "'</span> <span class="token operator">+</span>
+      $<span class="token number">2</span> <span class="token operator">+</span>
+      <span class="token string">'" / >&lt;/div> &lt;/div>'</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="团队协作能力-——-大疆-robomaster-冬令营"><a href="#团队协作能力-——-大疆-robomaster-冬令营" class="headerlink" title="团队协作能力 —— 大疆 robomaster 冬令营"></a>团队协作能力 —— 大疆 robomaster 冬令营</h3><p>2019 年初，我作为嵌入式进入了大疆 Robomaster 冬令营。虽之前也在 Github 上有过团队协作的经历，但还是第一次在线下参与这样的团队项目。十天中我们需要制作出两个机器人并与其他小组对抗。</p>
+<p>在这段时间里，我更加熟悉了以前只是当作项目存储的 git 版本库的使用，学会了 PID 调参（虽然还是很玄学），Google 代码风格的习惯派上了用场。我用串口与下位机 Arduino 通讯的红外阵列最终因为时间不够，考虑到稳定性而没能完全上场。不过我用两根皮筋制作的投放器设计，两片弯折硬纸板做的限位设计，也解决了储物箱容易卡位的问题。我发现了我在机械方面的天赋，准备进一步学习机械设计。</p>
+<p>而到目前为止，貌似官方还没有开源代码，由于有保密协议，我无法在这方面讲的太多……</p>
+<div style="display:flex;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\robomaster\0.jpg" width="60%"><br>  </div><br></div>
+
+<div style="display:flex;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\robomaster\1.jpg" width="90%"><br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\robomaster\2.jpg" width="90%"><br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\robomaster\3.jpg" width="90%"><br>  </div><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <img src="\gallery\robomaster\4.jpg" width="90%"><br>  </div>
+
+<p></p></div><p></p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><div style="display:flex;width:100%;"><br>  <div style="display:flex;flex-direction:column;align-items:center;width:100%"><br>    <h6>O ever youthful, O ever weeping / 永远年轻，永远热泪盈眶</h6><br>  </div><br></div><br><div style="display:flex;width:100%;justify-content:flex-end"><br>  张家平<br>  2019年3月<br></div>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 changyan -->
+<div id="changyan-comment">
+    <!--PC和WAP自适应版-->
+<div id="SOHUCS" sid="2019/03/09/DTP_5.1.0_ZN/"  ></div>
+<script type="text/javascript">
+(function(){
+var appid = 'cytpK5wmO';
+var conf = '0a769799987dc5bb3ba10140a583aca9';
+var width = window.innerWidth || document.documentElement.clientWidth;
+if (width < 960) {
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
+</div>
+<style>
+    #changyan-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2019总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+
+</body>
+
+
+
+
+ 	
+</html>
